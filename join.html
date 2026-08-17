@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join or Volunteer — Millis Robotics</title>
+<meta name="description" content="Sign up to join the Millis Robotics FTC team as a student, volunteer as a mentor, or sponsor the team's first season.">
+<meta name="theme-color" content="#c8102e">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.svg" alt="" width="42" height="42">
+      <span class="brand__name">Millis Robotics<span class="brand__tag">FTC · Millis, MA</span></span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span></span> Menu
+    </button>
+    <nav class="site-nav" id="site-nav" data-nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li class="nav-cta"><a href="join.html" aria-current="page">Join / Volunteer</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="wrap">
+      <div class="page-head__inner">
+        <span class="eyebrow">Join / Volunteer</span>
+        <h1>Be one of the first</h1>
+        <p>
+          Rookie teams are made of the handful of people who said yes before there was anything to see.
+          Students, mentors, and sponsors all start here.
+        </p>
+      </div>
+      <img class="page-head__mark" src="assets/img/logo.svg" alt="" width="120" height="120">
+    </div>
+  </section>
+
+  <!-- ====================== Three ways in ================================ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="grid grid--3">
+        <article class="card" id="students">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="7.5" r="3.6"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/>
+            </svg>
+          </div>
+          <h3>Students</h3>
+          <p>
+            No experience needed. Build, program, design, write the engineering notebook, or run outreach and
+            sponsorship. Fill out the form below — it takes two minutes and tells us which meeting times work
+            for you.
+          </p>
+        </article>
+        <article class="card" id="mentors">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15.5 3.2a5.5 5.5 0 0 0-6.1 8.3L3.6 17.3a2 2 0 0 0 2.8 2.8l5.8-5.8a5.5 5.5 0 0 0 8.3-6.1l-3.2 3.2-3.1-.8-.8-3.1z"/>
+            </svg>
+          </div>
+          <h3>Mentors &amp; volunteers</h3>
+          <p>
+            Our single biggest need. You don't need to know FTC — FIRST provides free mentor training, students
+            do the building, and the commitment is a few hours a week. Parents, alumni, neighbors, and anyone
+            who makes things are all welcome.
+          </p>
+        </article>
+        <article class="card" id="sponsor">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20.3l-7.4-7a4.6 4.6 0 1 1 7.4-5.3 4.6 4.6 0 1 1 7.4 5.3z"/>
+            </svg>
+          </div>
+          <h3>Sponsors</h3>
+          <p>
+            About $5,500 covers a full rookie season. Sponsor a kit, an entry fee, or whatever fits — your name
+            goes on the back of the team shirt and on this site, and we'll tell you exactly which budget line
+            you covered.
+          </p>
+        </article>
+      </div>
+
+      <p class="btn-row" style="margin-top:1.75rem">
+        <a class="btn" href="#form">Go to the form</a>
+        <a class="btn btn--ghost" data-contact-email href="mailto:">email us</a>
+        <a class="btn btn--ghost" href="about.html#main">Read the full plan</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ====================== The form ===================================== -->
+  <section class="section section--tint section--edge" id="form">
+    <div class="wrap" style="max-width:56rem">
+      <div class="section-head">
+        <span class="eyebrow">Interest form</span>
+        <h2>Sign up</h2>
+        <p>
+          One short form for everyone — students, parents, potential mentors, and businesses. Tell us who you
+          are and how you'd like to be involved, and we'll follow up directly.
+        </p>
+      </div>
+
+      <!-- Filled in by assets/js/site.js from interestForm.embedUrl in config.js -->
+      <div class="embed embed--form" data-embed="form" hidden></div>
+
+      <!-- Shown instead if the form URL hasn't been pasted into config.js yet -->
+      <div class="setup-note" data-embed-setup="form" hidden>
+        <span class="pill pill--accent">Setup needed</span>
+        <h3 style="margin-top:.75rem">The interest form isn't connected yet</h3>
+        <p>If you're setting this site up, connect the Google Form here:</p>
+        <ol>
+          <li>Open the form in Google Forms and click <strong>Publish</strong> (or <strong>Send</strong>).</li>
+          <li>Choose the <strong>embed &lt;&gt;</strong> option and copy the <code>src="…"</code> URL.</li>
+          <li>Paste it into <code>assets/js/config.js</code> as <code>interestForm.embedUrl</code>, and put the plain share link in <code>interestForm.shareUrl</code>.</li>
+        </ol>
+      </div>
+
+      <p class="btn-row" style="margin-top:1.25rem">
+        <a class="btn btn--ghost btn--sm" data-form-link href="#" target="_blank" rel="noopener">
+          Trouble with the form? Open it in a new tab
+        </a>
+      </p>
+
+      <noscript>
+        <div class="setup-note" style="margin-top:1.25rem">
+          <h3>JavaScript is off</h3>
+          <p class="mb-0">
+            The sign-up form loads with JavaScript. Turn it on, or just
+            <a data-contact-email href="mailto:">email us</a> and we'll get you signed up.
+          </p>
+        </div>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- ====================== What happens next ============================ -->
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">What happens next</span>
+        <h2>After you sign up</h2>
+        <ul class="checks">
+          <li><strong>We email you.</strong> Directly, from a real person — not an automated list.</li>
+          <li><strong>We schedule around you.</strong> Meeting times are set from what students pick on the form.</li>
+          <li><strong>First meeting.</strong> Once there's a mentor and a space, we start — kickoff is September 12.</li>
+          <li><strong>No obligation.</strong> Signing up is saying you're interested, not signing a contract.</li>
+        </ul>
+        <p class="small muted">
+          Under 18? Have a parent or guardian take a look at the form with you — we'll need their contact info
+          before any meetings start.
+        </p>
+      </div>
+
+      <aside class="card">
+        <span class="eyebrow">Spread the word</span>
+        <h3>Know somebody who'd be into this?</h3>
+        <p>
+          The hardest part of starting a team isn't the robot — it's finding the first few people. If you know a
+          Millis student who'd love this, an engineer who'd mentor, or a local business owner who'd sponsor,
+          send them this page.
+        </p>
+        <p class="mb-0">
+          <a data-contact-email href="mailto:">email us</a> · share <strong>this page</strong> with anyone who
+          should see it.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:.75rem">
+          <img src="assets/img/logo.svg" alt="" width="34" height="34">
+          <span class="brand__name">Millis Robotics</span>
+        </a>
+        <p class="small muted">
+          A student-led effort to launch a FIRST Tech Challenge team in Millis, Massachusetts, for the
+          2026–27 season.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="join.html">Join / Volunteer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>FIRST resources</h4>
+        <ul>
+          <li><a href="https://www.firstinspires.org/robotics/ftc" rel="noopener">What is FTC?</a></li>
+          <li><a href="https://training.firstinspires.org/" rel="noopener">Mentor &amp; student training</a></li>
+          <li><a href="https://scholarships.firstinspires.org/" rel="noopener">FIRST scholarships</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a data-contact-email href="mailto:">email us</a></li>
+          <li><a href="join.html">Interest form</a></li>
+          <li><a href="join.html#sponsor">Sponsor the team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© <span data-year>2026</span> Millis Robotics</span>
+      <span>Team in formation — not yet an official school program.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

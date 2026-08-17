@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Placeholder team photo 2">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#101725"/>
+      <stop offset="0.5" stop-color="#1d2436"/>
+      <stop offset="1" stop-color="#2c1620"/>
+    </linearGradient>
+    <pattern id="grid2" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0v80" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g2)"/>
+  <rect width="1600" height="900" fill="url(#grid2)"/>
+  <g stroke="#ffc233" stroke-opacity="0.35" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M120 780h1360"/>
+    <path d="M180 780V520l120-90 140 110v240"/>
+    <path d="M980 780V600l150-70 130 90v160"/>
+  </g>
+  <g fill="#c8102e" fill-opacity="0.2">
+    <circle cx="500" cy="240" r="120"/>
+    <circle cx="1180" cy="300" r="86"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.24" stroke-width="6" stroke-linecap="round">
+    <circle cx="800" cy="380" r="86"/>
+    <path d="M800 294v-40M800 466v40M714 380h-40M886 380h40M739 319l-28-28M861 441l28 28M861 319l28-28M739 441l-28 28"/>
+  </g>
+  <g font-family="'Space Grotesk','Trebuchet MS',sans-serif" text-anchor="end">
+    <text x="1540" y="700" fill="#ffffff" fill-opacity="0.7" font-size="34" font-weight="700" letter-spacing="3">TEAM PHOTO 02</text>
+    <text x="1540" y="738" fill="#ffffff" fill-opacity="0.4" font-size="21" letter-spacing="1">placeholder — build session, workshop, or kickoff</text>
+  </g>
+</svg>

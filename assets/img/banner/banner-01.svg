@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Placeholder team photo 1">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b2030"/>
+      <stop offset="0.55" stop-color="#3a1420"/>
+      <stop offset="1" stop-color="#0f1218"/>
+    </linearGradient>
+    <pattern id="hex1" width="72" height="124" patternUnits="userSpaceOnUse" patternTransform="scale(1.15)">
+      <path d="M36 2 66 19v34L36 70 6 53V19z" fill="none" stroke="#ffffff" stroke-opacity="0.055" stroke-width="2"/>
+      <path d="M0 64 30 81v34L0 132l-30-17V81z" fill="none" stroke="#ffffff" stroke-opacity="0.055" stroke-width="2"/>
+      <path d="M72 64l30 17v34l-30 17-30-17V81z" fill="none" stroke="#ffffff" stroke-opacity="0.055" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g1)"/>
+  <rect width="1600" height="900" fill="url(#hex1)"/>
+  <circle cx="1260" cy="250" r="230" fill="#c8102e" fill-opacity="0.16"/>
+  <circle cx="330" cy="720" r="180" fill="#ffc233" fill-opacity="0.09"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="6" stroke-linecap="round">
+    <rect x="660" y="352" width="280" height="196" rx="22"/>
+    <path d="M726 352v-34h148v34M740 452h30M860 452h30"/>
+    <path d="M756 500h88"/>
+  </g>
+  <g font-family="'Space Grotesk','Trebuchet MS',sans-serif" text-anchor="end">
+    <text x="1540" y="700" fill="#ffffff" fill-opacity="0.7" font-size="34" font-weight="700" letter-spacing="3">TEAM PHOTO 01</text>
+    <text x="1540" y="738" fill="#ffffff" fill-opacity="0.4" font-size="21" letter-spacing="1">placeholder — swap in a real photo (1600 × 900)</text>
+  </g>
+</svg>

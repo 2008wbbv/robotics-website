@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Placeholder team photo 5">
+  <defs>
+    <linearGradient id="g5" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#131a26"/>
+      <stop offset="0.7" stop-color="#0f1218"/>
+      <stop offset="1" stop-color="#2a1018"/>
+    </linearGradient>
+    <pattern id="dots5" width="46" height="46" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2.5" fill="#ffffff" fill-opacity="0.07"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g5)"/>
+  <rect width="1600" height="900" fill="url(#dots5)"/>
+  <g fill="none" stroke="#c8102e" stroke-opacity="0.45" stroke-width="7" stroke-linecap="round">
+    <path d="M240 700c120-260 300-260 420 0s300 260 420 0"/>
+  </g>
+  <g fill="none" stroke="#ffc233" stroke-opacity="0.5" stroke-width="6" stroke-linecap="round">
+    <path d="M1180 250l40 40 80-90"/>
+    <circle cx="1240" cy="270" r="96"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.24" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M470 430h260l60 90H410z"/>
+    <path d="M540 430V300h120v130"/>
+    <path d="M600 300V240"/>
+  </g>
+  <g font-family="'Space Grotesk','Trebuchet MS',sans-serif" text-anchor="end">
+    <text x="1540" y="700" fill="#ffffff" fill-opacity="0.7" font-size="34" font-weight="700" letter-spacing="3">TEAM PHOTO 05</text>
+    <text x="1540" y="738" fill="#ffffff" fill-opacity="0.4" font-size="21" letter-spacing="1">placeholder — the whole team, group shot</text>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Placeholder team photo 3">
+  <defs>
+    <linearGradient id="g3" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#241019"/>
+      <stop offset="0.5" stop-color="#141824"/>
+      <stop offset="1" stop-color="#0c1016"/>
+    </linearGradient>
+    <radialGradient id="glow3" cx="0.5" cy="0.35" r="0.6">
+      <stop offset="0" stop-color="#ffc233" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffc233" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g3)"/>
+  <rect width="1600" height="900" fill="url(#glow3)"/>
+  <g stroke="#ffffff" stroke-opacity="0.08" stroke-width="2" fill="none">
+    <path d="M0 300h1600M0 450h1600M0 600h1600M400 0v900M800 0v900M1200 0v900"/>
+  </g>
+  <g fill="none" stroke="#c8102e" stroke-opacity="0.55" stroke-width="8" stroke-linejoin="round">
+    <path d="M520 640l120-200 120 120 100-180 120 260"/>
+  </g>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.26" stroke-width="6" stroke-linecap="round">
+    <rect x="690" y="300" width="220" height="150" rx="18"/>
+    <path d="M690 360h220M756 300v-46h88v46"/>
+    <circle cx="748" cy="405" r="14"/>
+    <circle cx="852" cy="405" r="14"/>
+  </g>
+  <g font-family="'Space Grotesk','Trebuchet MS',sans-serif" text-anchor="end">
+    <text x="1540" y="700" fill="#ffffff" fill-opacity="0.7" font-size="34" font-weight="700" letter-spacing="3">TEAM PHOTO 03</text>
+    <text x="1540" y="738" fill="#ffffff" fill-opacity="0.4" font-size="21" letter-spacing="1">placeholder — competition day / driver station</text>
+  </g>
+</svg>

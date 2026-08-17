@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News — Millis Robotics</title>
+<meta name="description" content="Updates from the effort to launch a FIRST Tech Challenge team in Millis, Massachusetts — funding, mentors, recruiting, and season planning.">
+<meta name="theme-color" content="#c8102e">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.svg" alt="" width="42" height="42">
+      <span class="brand__name">Millis Robotics<span class="brand__tag">FTC · Millis, MA</span></span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span></span> Menu
+    </button>
+    <nav class="site-nav" id="site-nav" data-nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="news.html" aria-current="page">News</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li class="nav-cta"><a href="join.html">Join / Volunteer</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="wrap">
+      <div class="page-head__inner">
+        <span class="eyebrow">News</span>
+        <h1>Updates from the launch</h1>
+        <p>
+          Every step of getting a rookie FTC team off the ground — what we've learned, what it costs, and what
+          we still need. Newest first.
+        </p>
+      </div>
+      <img class="page-head__mark" src="assets/img/logo.svg" alt="" width="120" height="120">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap" style="max-width:52rem">
+      <!-- Posts are rendered from assets/js/news-data.js — add updates there. -->
+      <div class="news-list" data-news-list></div>
+
+      <noscript>
+        <div class="setup-note">
+          <h3>Updates need JavaScript</h3>
+          <p class="mb-0">
+            This page loads its posts from a small script. Turn JavaScript on to read them, or
+            <a data-contact-email href="mailto:">email us</a> and we'll send you the latest.
+          </p>
+        </div>
+      </noscript>
+    </div>
+  </section>
+
+  <section class="section section--tint section--edge">
+    <div class="wrap">
+      <div class="band">
+        <div class="split split--even" style="align-items:center">
+          <div>
+            <h2 class="mb-0">Want the next update sooner?</h2>
+            <p style="margin-top:.6rem">
+              Sign up on the interest form and we'll email you directly as the team comes together — or check
+              the calendar for what's next.
+            </p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--accent" href="join.html">Join the list</a>
+            <a class="btn btn--ghost" href="calendar.html">Calendar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:.75rem">
+          <img src="assets/img/logo.svg" alt="" width="34" height="34">
+          <span class="brand__name">Millis Robotics</span>
+        </a>
+        <p class="small muted">
+          A student-led effort to launch a FIRST Tech Challenge team in Millis, Massachusetts, for the
+          2026–27 season.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="join.html">Join / Volunteer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>FIRST resources</h4>
+        <ul>
+          <li><a href="https://www.firstinspires.org/robotics/ftc" rel="noopener">What is FTC?</a></li>
+          <li><a href="https://training.firstinspires.org/" rel="noopener">Mentor &amp; student training</a></li>
+          <li><a href="https://scholarships.firstinspires.org/" rel="noopener">FIRST scholarships</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a data-contact-email href="mailto:">email us</a></li>
+          <li><a href="join.html">Interest form</a></li>
+          <li><a href="join.html#sponsor">Sponsor the team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© <span data-year>2026</span> Millis Robotics</span>
+      <span>Team in formation — not yet an official school program.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/news-data.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

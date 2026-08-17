@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calendar — Millis Robotics</title>
+<meta name="description" content="Meeting times, key season dates, and the live team calendar for Millis Robotics — kickoff September 12, 2026, qualifiers December through March.">
+<meta name="theme-color" content="#c8102e">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.svg" alt="" width="42" height="42">
+      <span class="brand__name">Millis Robotics<span class="brand__tag">FTC · Millis, MA</span></span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span></span> Menu
+    </button>
+    <nav class="site-nav" id="site-nav" data-nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="calendar.html" aria-current="page">Calendar</a></li>
+        <li class="nav-cta"><a href="join.html">Join / Volunteer</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="wrap">
+      <div class="page-head__inner">
+        <span class="eyebrow">Calendar</span>
+        <h1>Meetings, deadlines, and competition days</h1>
+        <p>
+          The live calendar below is the source of truth for meeting times. The season milestones underneath it
+          are fixed by FIRST and by the Massachusetts event schedule.
+        </p>
+      </div>
+      <img class="page-head__mark" src="assets/img/logo.svg" alt="" width="120" height="120">
+    </div>
+  </section>
+
+  <!-- ====================== Google Calendar embed ======================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Live team calendar</span>
+        <h2>What's coming up</h2>
+        <p>Meetings, build sessions, deadlines, and events. Times are Eastern.</p>
+      </div>
+
+      <!-- Filled in by assets/js/site.js from calendar.embedUrl in config.js -->
+      <div class="embed embed--calendar" data-embed="calendar" hidden></div>
+
+      <!-- Shown instead if the calendar URL hasn't been pasted into config.js yet -->
+      <div class="setup-note" data-embed-setup="calendar" hidden>
+        <span class="pill pill--accent">Setup needed</span>
+        <h3 style="margin-top:.75rem">The team calendar isn't connected yet</h3>
+        <p>
+          Once we have a meeting schedule, a public Google Calendar goes here. If you're setting this site up,
+          it takes about two minutes:
+        </p>
+        <ol>
+          <li>Create the team calendar in Google Calendar.</li>
+          <li>Open <strong>Settings → (your calendar) → Access permissions</strong> and tick <strong>Make available to public</strong>.</li>
+          <li>Scroll to <strong>Integrate calendar</strong> and copy the <code>src="…"</code> URL out of the embed code.</li>
+          <li>Paste it into <code>assets/js/config.js</code> as <code>calendar.embedUrl</code>.</li>
+        </ol>
+      </div>
+
+      <p class="btn-row" style="margin-top:1.25rem">
+        <a class="btn btn--ghost btn--sm" data-calendar-link href="#" hidden rel="noopener">Add this calendar to your own</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ====================== Key season dates ============================= -->
+  <section class="section section--tint section--edge">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">Season milestones</span>
+        <h2>The 2026–27 FTC calendar</h2>
+        <ul class="dates">
+          <li>
+            <span class="dates__when">Open now</span>
+            <span class="dates__what">
+              <strong>Team registration</strong>
+              <small>Registration for the season is open. The $350 national fee can be paid as late as the morning of our first competition.</small>
+            </span>
+          </li>
+          <li>
+            <span class="dates__when">Sat, Sep 12, 2026</span>
+            <span class="dates__what">
+              <strong>Kickoff — the game is revealed</strong>
+              <small>The season's challenge drops. Worth attending even if a team isn't fully formed yet.</small>
+            </span>
+          </li>
+          <li>
+            <span class="dates__when">Sep – Nov 2026</span>
+            <span class="dates__what">
+              <strong>Design and build season</strong>
+              <small>Prototyping, CAD, programming, and the engineering notebook. The busiest stretch of the year.</small>
+            </span>
+          </li>
+          <li>
+            <span class="dates__when">Dec 2026 – Mar 2027</span>
+            <span class="dates__what">
+              <strong>Massachusetts qualifiers</strong>
+              <small>Roughly ten events statewide; each team is offered two. Entry is $200 per event, mostly east of Worcester and generally under an hour from Millis.</small>
+            </span>
+          </li>
+          <li>
+            <span class="dates__when">Late Mar 2027</span>
+            <span class="dates__what">
+              <strong>Massachusetts State Championship</strong>
+              <small>$300 entry, for teams that advance out of qualifiers.</small>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <aside class="card">
+        <span class="eyebrow">Meeting times</span>
+        <h3>Not locked in yet</h3>
+        <p>
+          We're picking meeting times around what students actually choose on the interest survey — before
+          school, after school, or weekends.
+        </p>
+        <p>
+          For scale: a highly competitive FTC team meets four evenings a week plus a weekend day in season. A
+          minimum-viable team meets for one hour a week. Year one lands somewhere in between.
+        </p>
+        <div class="btn-row" style="margin-top:1.25rem">
+          <a class="btn" href="join.html">Tell us when you're free</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:.75rem">
+          <img src="assets/img/logo.svg" alt="" width="34" height="34">
+          <span class="brand__name">Millis Robotics</span>
+        </a>
+        <p class="small muted">
+          A student-led effort to launch a FIRST Tech Challenge team in Millis, Massachusetts, for the
+          2026–27 season.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="join.html">Join / Volunteer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>FIRST resources</h4>
+        <ul>
+          <li><a href="https://www.firstinspires.org/robotics/ftc" rel="noopener">What is FTC?</a></li>
+          <li><a href="https://training.firstinspires.org/" rel="noopener">Mentor &amp; student training</a></li>
+          <li><a href="https://scholarships.firstinspires.org/" rel="noopener">FIRST scholarships</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a data-contact-email href="mailto:">email us</a></li>
+          <li><a href="join.html">Interest form</a></li>
+          <li><a href="join.html#sponsor">Sponsor the team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© <span data-year>2026</span> Millis Robotics</span>
+      <span>Team in formation — not yet an official school program.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
