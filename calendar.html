@@ -4,9 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calendar — Millis Robotics</title>
-<meta name="description" content="Meeting times, key season dates, and the live team calendar for Millis Robotics — kickoff September 12, 2026, qualifiers December through March.">
+<meta name="description" content="Meeting times, tournament dates, and the season calendar for the Millis Robotics VEX V5 team.">
 <meta name="theme-color" content="#c8102e">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Calendar — Millis Robotics">
+<meta property="og:description" content="Meeting times, tournament dates, and the season calendar for the Millis Robotics VEX V5 team.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -18,8 +21,9 @@
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a class="brand" href="index.html">
+      <!-- PLACEHOLDER LOGO: replace assets/img/logo.svg with the real team logo -->
       <img src="assets/img/logo.svg" alt="" width="42" height="42">
-      <span class="brand__name">Millis Robotics<span class="brand__tag">FTC · Millis, MA</span></span>
+      <span class="brand__name">Millis Robotics<span class="brand__tag">VEX V5 · Millis, MA</span></span>
     </a>
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle__bars" aria-hidden="true"><span></span></span> Menu
@@ -30,7 +34,8 @@
         <li><a href="about.html">About</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="calendar.html" aria-current="page">Calendar</a></li>
-        <li class="nav-cta"><a href="join.html">Join / Volunteer</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li class="nav-cta"><a href="join.html">Join</a></li>
       </ul>
     </nav>
   </div>
@@ -42,23 +47,19 @@
     <div class="wrap">
       <div class="page-head__inner">
         <span class="eyebrow">Calendar</span>
-        <h1>Meetings, deadlines, and competition days</h1>
-        <p>
-          The live calendar below is the source of truth for meeting times. The season milestones underneath it
-          are fixed by FIRST and by the Massachusetts event schedule.
-        </p>
+        <h1>Meetings and competition days</h1>
+        <p>The live calendar is the source of truth for meetings. Season milestones are set by the VEX competition schedule.</p>
       </div>
       <img class="page-head__mark" src="assets/img/logo.svg" alt="" width="120" height="120">
     </div>
   </section>
 
-  <!-- ====================== Google Calendar embed ======================== -->
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Live team calendar</span>
-        <h2>What's coming up</h2>
-        <p>Meetings, build sessions, deadlines, and events. Times are Eastern.</p>
+        <span class="eyebrow">Team calendar</span>
+        <h2>What&rsquo;s coming up</h2>
+        <p>Meetings, build sessions, and events. Times are Eastern.</p>
       </div>
 
       <!-- Filled in by assets/js/site.js from calendar.embedUrl in config.js -->
@@ -66,16 +67,16 @@
 
       <!-- Shown instead if the calendar URL hasn't been pasted into config.js yet -->
       <div class="setup-note" data-embed-setup="calendar" hidden>
-        <span class="pill pill--accent">Setup needed</span>
-        <h3 style="margin-top:.75rem">The team calendar isn't connected yet</h3>
+        <span class="pill pill--accent">Coming soon</span>
+        <h3 style="margin-top:.75rem">The team calendar goes here</h3>
         <p>
-          Once we have a meeting schedule, a public Google Calendar goes here. If you're setting this site up,
-          it takes about two minutes:
+          Meeting times are being set now. If you are setting this site up, connecting the calendar
+          takes about two minutes:
         </p>
         <ol>
           <li>Create the team calendar in Google Calendar.</li>
-          <li>Open <strong>Settings → (your calendar) → Access permissions</strong> and tick <strong>Make available to public</strong>.</li>
-          <li>Scroll to <strong>Integrate calendar</strong> and copy the <code>src="…"</code> URL out of the embed code.</li>
+          <li>Open <strong>Settings &rarr; (your calendar) &rarr; Access permissions</strong> and tick <strong>Make available to public</strong>.</li>
+          <li>Scroll to <strong>Integrate calendar</strong> and copy the <code>src="&hellip;"</code> URL out of the embed code.</li>
           <li>Paste it into <code>assets/js/config.js</code> as <code>calendar.embedUrl</code>.</li>
         </ol>
       </div>
@@ -86,69 +87,69 @@
     </div>
   </section>
 
-  <!-- ====================== Key season dates ============================= -->
   <section class="section section--tint section--edge">
     <div class="wrap split">
       <div>
         <span class="eyebrow">Season milestones</span>
-        <h2>The 2026–27 FTC calendar</h2>
+        <h2>The VEX season</h2>
         <ul class="dates">
           <li>
-            <span class="dates__when">Open now</span>
+            <span class="dates__when">Now</span>
             <span class="dates__what">
-              <strong>Team registration</strong>
-              <small>Registration for the season is open. The $350 national fee can be paid as late as the morning of our first competition.</small>
+              <strong>Sign-ups are open</strong>
+              <small>Students and volunteers can sign up any time &mdash; the sooner the better.</small>
             </span>
           </li>
           <li>
-            <span class="dates__when">Sat, Sep 12, 2026</span>
+            <span class="dates__when">September</span>
             <span class="dates__what">
-              <strong>Kickoff — the game is revealed</strong>
-              <small>The season's challenge drops. Worth attending even if a team isn't fully formed yet.</small>
+              <strong>Meetings begin</strong>
+              <small>Strategy, prototyping, and learning the tools. Times are set around what students pick on the sign-up form.</small>
             </span>
           </li>
           <li>
-            <span class="dates__when">Sep – Nov 2026</span>
+            <span class="dates__when">Fall &ndash; winter</span>
             <span class="dates__what">
-              <strong>Design and build season</strong>
-              <small>Prototyping, CAD, programming, and the engineering notebook. The busiest stretch of the year.</small>
+              <strong>Tournaments across Massachusetts</strong>
+              <small>Event dates are posted on RobotEvents as they are scheduled, and land on this calendar as we enter them.</small>
             </span>
           </li>
           <li>
-            <span class="dates__when">Dec 2026 – Mar 2027</span>
-            <span class="dates__what">
-              <strong>Massachusetts qualifiers</strong>
-              <small>Roughly ten events statewide; each team is offered two. Entry is $200 per event, mostly east of Worcester and generally under an hour from Millis.</small>
-            </span>
-          </li>
-          <li>
-            <span class="dates__when">Late Mar 2027</span>
+            <span class="dates__when">Late winter</span>
             <span class="dates__what">
               <strong>Massachusetts State Championship</strong>
-              <small>$300 entry, for teams that advance out of qualifiers.</small>
+              <small>For teams that qualify through the season.</small>
+            </span>
+          </li>
+          <li>
+            <span class="dates__when">Spring</span>
+            <span class="dates__what">
+              <strong>VEX World Championship</strong>
+              <small>The end of the season, and the reveal of next year&rsquo;s game.</small>
             </span>
           </li>
         </ul>
+        <p class="btn-row">
+          <a class="btn btn--ghost btn--sm" href="https://www.robotevents.com/" rel="noopener">Find events on RobotEvents</a>
+        </p>
       </div>
 
       <aside class="card">
         <span class="eyebrow">Meeting times</span>
-        <h3>Not locked in yet</h3>
+        <h3>Built around your schedule</h3>
         <p>
-          We're picking meeting times around what students actually choose on the interest survey — before
-          school, after school, or weekends.
+          Meeting times are chosen from what students pick on the sign-up form &mdash; before school,
+          after school, or weekends.
         </p>
         <p>
-          For scale: a highly competitive FTC team meets four evenings a week plus a weekend day in season. A
-          minimum-viable team meets for one hour a week. Year one lands somewhere in between.
+          Sports, a job, or another club do not disqualify you. Tell us what works and it gets factored in.
         </p>
         <div class="btn-row" style="margin-top:1.25rem">
-          <a class="btn" href="join.html">Tell us when you're free</a>
+          <a class="btn" href="join.html">Tell us when you&rsquo;re free</a>
         </div>
       </aside>
     </div>
   </section>
-
 </main>
 
 <footer class="site-footer">
@@ -160,8 +161,8 @@
           <span class="brand__name">Millis Robotics</span>
         </a>
         <p class="small muted">
-          A student-led effort to launch a FIRST Tech Challenge team in Millis, Massachusetts, for the
-          2026–27 season.
+          Millis Robotics competes in the VEX V5 Robotics Competition. Students design, build,
+          program, and drive the robot.
         </p>
       </div>
       <div>
@@ -171,29 +172,31 @@
           <li><a href="about.html">About</a></li>
           <li><a href="news.html">News</a></li>
           <li><a href="calendar.html">Calendar</a></li>
-          <li><a href="join.html">Join / Volunteer</a></li>
+          <li><a href="sponsors.html">Sponsors</a></li>
+          <li><a href="join.html">Join</a></li>
         </ul>
       </div>
       <div>
-        <h4>FIRST resources</h4>
+        <h4>VEX resources</h4>
         <ul>
-          <li><a href="https://www.firstinspires.org/robotics/ftc" rel="noopener">What is FTC?</a></li>
-          <li><a href="https://training.firstinspires.org/" rel="noopener">Mentor &amp; student training</a></li>
-          <li><a href="https://scholarships.firstinspires.org/" rel="noopener">FIRST scholarships</a></li>
+          <li><a href="https://www.vexrobotics.com/v5/competition" rel="noopener">What is VEX V5?</a></li>
+          <li><a href="https://www.roboticseducation.org/" rel="noopener">REC Foundation</a></li>
+          <li><a href="https://www.robotevents.com/" rel="noopener">Find events on RobotEvents</a></li>
         </ul>
       </div>
       <div>
         <h4>Get in touch</h4>
         <ul>
-          <li><a data-contact-email href="mailto:">email us</a></li>
-          <li><a href="join.html">Interest form</a></li>
-          <li><a href="join.html#sponsor">Sponsor the team</a></li>
+          <li><a data-contact-email="show" href="mailto:">email us</a></li>
+          <li><a href="join.html">Student sign-up</a></li>
+          <li><a href="join.html#volunteer">Volunteer with us</a></li>
+          <li><a href="sponsors.html">Sponsor the team</a></li>
         </ul>
       </div>
     </div>
     <div class="site-footer__bottom">
-      <span>© <span data-year>2026</span> Millis Robotics</span>
-      <span>Team in formation — not yet an official school program.</span>
+      <span>&copy; <span data-year>2026</span> Millis Robotics</span>
+      <span>Millis, Massachusetts &middot; VEX V5 Robotics Competition</span>
     </div>
   </div>
 </footer>

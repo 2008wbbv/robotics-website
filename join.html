@@ -3,10 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Join or Volunteer — Millis Robotics</title>
-<meta name="description" content="Sign up to join the Millis Robotics FTC team as a student, volunteer as a mentor, or sponsor the team's first season.">
+<title>Join — Millis Robotics</title>
+<meta name="description" content="Sign up for the Millis Robotics VEX V5 team: student sign-up form, volunteer form, and sponsorship information.">
 <meta name="theme-color" content="#c8102e">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Join — Millis Robotics">
+<meta property="og:description" content="Sign up for the Millis Robotics VEX V5 team: student sign-up form, volunteer form, and sponsorship information.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -18,8 +21,9 @@
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a class="brand" href="index.html">
+      <!-- PLACEHOLDER LOGO: replace assets/img/logo.svg with the real team logo -->
       <img src="assets/img/logo.svg" alt="" width="42" height="42">
-      <span class="brand__name">Millis Robotics<span class="brand__tag">FTC · Millis, MA</span></span>
+      <span class="brand__name">Millis Robotics<span class="brand__tag">VEX V5 · Millis, MA</span></span>
     </a>
     <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle__bars" aria-hidden="true"><span></span></span> Menu
@@ -30,7 +34,8 @@
         <li><a href="about.html">About</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="calendar.html">Calendar</a></li>
-        <li class="nav-cta"><a href="join.html" aria-current="page">Join / Volunteer</a></li>
+        <li><a href="sponsors.html">Sponsors</a></li>
+        <li class="nav-cta"><a href="join.html" aria-current="page">Join</a></li>
       </ul>
     </nav>
   </div>
@@ -41,18 +46,14 @@
   <section class="page-head">
     <div class="wrap">
       <div class="page-head__inner">
-        <span class="eyebrow">Join / Volunteer</span>
-        <h1>Be one of the first</h1>
-        <p>
-          Rookie teams are made of the handful of people who said yes before there was anything to see.
-          Students, mentors, and sponsors all start here.
-        </p>
+        <span class="eyebrow">Join</span>
+        <h1>Get on the team</h1>
+        <p>Students, volunteers, and sponsors &mdash; everything starts with one short form.</p>
       </div>
       <img class="page-head__mark" src="assets/img/logo.svg" alt="" width="120" height="120">
     </div>
   </section>
 
-  <!-- ====================== Three ways in ================================ -->
   <section class="section">
     <div class="wrap">
       <div class="grid grid--3">
@@ -64,23 +65,23 @@
           </div>
           <h3>Students</h3>
           <p>
-            No experience needed. Build, program, design, write the engineering notebook, or run outreach and
-            sponsorship. Fill out the form below — it takes two minutes and tells us which meeting times work
-            for you.
+            Build, program, design, document, or run the team&rsquo;s outreach. No experience needed, and
+            the form asks which meeting times actually work for you.
           </p>
+          <p class="mb-0"><a href="#student">Go to the student form &rarr;</a></p>
         </article>
-        <article class="card" id="mentors">
+        <article class="card" id="volunteers">
           <div class="card__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
               <path d="M15.5 3.2a5.5 5.5 0 0 0-6.1 8.3L3.6 17.3a2 2 0 0 0 2.8 2.8l5.8-5.8a5.5 5.5 0 0 0 8.3-6.1l-3.2 3.2-3.1-.8-.8-3.1z"/>
             </svg>
           </div>
-          <h3>Mentors &amp; volunteers</h3>
+          <h3>Volunteers</h3>
           <p>
-            Our single biggest need. You don't need to know FTC — FIRST provides free mentor training, students
-            do the building, and the commitment is a few hours a week. Parents, alumni, neighbors, and anyone
-            who makes things are all welcome.
+            Parents, alumni, engineers, machinists, coders, drivers, photographers. You do not need to
+            know VEX &mdash; a few hours a week is a real contribution.
           </p>
+          <p class="mb-0"><a href="#volunteer">Go to the volunteer form &rarr;</a></p>
         </article>
         <article class="card" id="sponsor">
           <div class="card__icon" aria-hidden="true">
@@ -90,100 +91,109 @@
           </div>
           <h3>Sponsors</h3>
           <p>
-            About $5,500 covers a full rookie season. Sponsor a kit, an entry fee, or whatever fits — your name
-            goes on the back of the team shirt and on this site, and we'll tell you exactly which budget line
-            you covered.
+            Tiers start at $250 and put your business on the team shirt, the tournament banner, and
+            &mdash; at the top &mdash; the robot.
           </p>
+          <p class="mb-0"><a href="sponsors.html">See sponsorship tiers &rarr;</a></p>
         </article>
       </div>
-
-      <p class="btn-row" style="margin-top:1.75rem">
-        <a class="btn" href="#form">Go to the form</a>
-        <a class="btn btn--ghost" data-contact-email href="mailto:">email us</a>
-        <a class="btn btn--ghost" href="about.html#main">Read the full plan</a>
-      </p>
     </div>
   </section>
 
-  <!-- ====================== The form ===================================== -->
-  <section class="section section--tint section--edge" id="form">
+  <section class="section section--tint section--edge" id="forms">
     <div class="wrap" style="max-width:56rem">
       <div class="section-head">
-        <span class="eyebrow">Interest form</span>
-        <h2>Sign up</h2>
-        <p>
-          One short form for everyone — students, parents, potential mentors, and businesses. Tell us who you
-          are and how you'd like to be involved, and we'll follow up directly.
-        </p>
+        <span class="eyebrow">Sign up</span>
+        <h2>Two forms, two minutes</h2>
+        <p>One for students, one for everybody else. Pick whichever fits.</p>
       </div>
 
-      <!-- Filled in by assets/js/site.js from interestForm.embedUrl in config.js -->
-      <div class="embed embed--form" data-embed="form" hidden></div>
+      <div class="tabs" data-tabs>
+        <div class="tabs__list" role="tablist" aria-label="Sign-up forms">
+          <button class="tabs__tab" type="button" role="tab" id="student" aria-controls="panel-student" aria-selected="true">I&rsquo;m a student</button>
+          <button class="tabs__tab" type="button" role="tab" id="volunteer" aria-controls="panel-volunteer" aria-selected="false" tabindex="-1">I want to volunteer</button>
+        </div>
 
-      <!-- Shown instead if the form URL hasn't been pasted into config.js yet -->
-      <div class="setup-note" data-embed-setup="form" hidden>
-        <span class="pill pill--accent">Setup needed</span>
-        <h3 style="margin-top:.75rem">The interest form isn't connected yet</h3>
-        <p>If you're setting this site up, connect the Google Form here:</p>
-        <ol>
-          <li>Open the form in Google Forms and click <strong>Publish</strong> (or <strong>Send</strong>).</li>
-          <li>Choose the <strong>embed &lt;&gt;</strong> option and copy the <code>src="…"</code> URL.</li>
-          <li>Paste it into <code>assets/js/config.js</code> as <code>interestForm.embedUrl</code>, and put the plain share link in <code>interestForm.shareUrl</code>.</li>
-        </ol>
+        <div role="tabpanel" id="panel-student" aria-labelledby="student">
+          <!-- Filled in by assets/js/site.js from studentForm.embedUrl in config.js -->
+          <div class="embed embed--form" data-embed="student-form" hidden></div>
+          <div class="setup-note" data-embed-setup="student-form" hidden>
+            <span class="pill pill--accent">Coming soon</span>
+            <h3 style="margin-top:.75rem">The student form goes here</h3>
+            <p class="mb-0">
+              It is not connected yet &mdash; <a data-contact-email="show" href="mailto:">email us</a> in the
+              meantime and we will add you to the list. (Setup: paste the form&rsquo;s embed URL into
+              <code>assets/js/config.js</code> as <code>studentForm.embedUrl</code>.)
+            </p>
+          </div>
+          <p class="btn-row" style="margin-top:1.25rem">
+            <a class="btn btn--ghost btn--sm" data-student-form-link href="#" target="_blank" rel="noopener" hidden>
+              Trouble with the form? Open it in a new tab
+            </a>
+          </p>
+        </div>
+
+        <div role="tabpanel" id="panel-volunteer" aria-labelledby="volunteer" hidden>
+          <!-- Filled in by assets/js/site.js from volunteerForm.embedUrl in config.js -->
+          <div class="embed embed--form" data-embed="volunteer-form" hidden></div>
+          <div class="setup-note" data-embed-setup="volunteer-form" hidden>
+            <span class="pill pill--accent">Coming soon</span>
+            <h3 style="margin-top:.75rem">The volunteer form goes here</h3>
+            <p class="mb-0">
+              Not connected yet &mdash; in the meantime just
+              <a data-contact-email="show" href="mailto:">email us</a> and say what you would like to help with.
+              (Setup: paste the form&rsquo;s embed URL into <code>assets/js/config.js</code> as
+              <code>volunteerForm.embedUrl</code>.)
+            </p>
+          </div>
+          <p class="btn-row" style="margin-top:1.25rem">
+            <a class="btn btn--ghost btn--sm" data-volunteer-form-link href="#" target="_blank" rel="noopener" hidden>
+              Trouble with the form? Open it in a new tab
+            </a>
+          </p>
+        </div>
       </div>
-
-      <p class="btn-row" style="margin-top:1.25rem">
-        <a class="btn btn--ghost btn--sm" data-form-link href="#" target="_blank" rel="noopener">
-          Trouble with the form? Open it in a new tab
-        </a>
-      </p>
 
       <noscript>
         <div class="setup-note" style="margin-top:1.25rem">
           <h3>JavaScript is off</h3>
           <p class="mb-0">
-            The sign-up form loads with JavaScript. Turn it on, or just
-            <a data-contact-email href="mailto:">email us</a> and we'll get you signed up.
+            The sign-up forms load with JavaScript. Turn it on, or
+            <a data-contact-email="show" href="mailto:">email us</a> and we will get you signed up.
           </p>
         </div>
       </noscript>
     </div>
   </section>
 
-  <!-- ====================== What happens next ============================ -->
   <section class="section">
     <div class="wrap split">
       <div>
         <span class="eyebrow">What happens next</span>
         <h2>After you sign up</h2>
         <ul class="checks">
-          <li><strong>We email you.</strong> Directly, from a real person — not an automated list.</li>
-          <li><strong>We schedule around you.</strong> Meeting times are set from what students pick on the form.</li>
-          <li><strong>First meeting.</strong> Once there's a mentor and a space, we start — kickoff is September 12.</li>
-          <li><strong>No obligation.</strong> Signing up is saying you're interested, not signing a contract.</li>
+          <li><strong>We email you.</strong> Directly, from a real person &mdash; not an automated list.</li>
+          <li><strong>We schedule around you.</strong> Meeting times come from what students pick on the form.</li>
+          <li><strong>You show up.</strong> Bring nothing. Everything you need is already in the room.</li>
+          <li><strong>No obligation.</strong> Signing up says you are interested, not that you signed a contract.</li>
         </ul>
         <p class="small muted">
-          Under 18? Have a parent or guardian take a look at the form with you — we'll need their contact info
-          before any meetings start.
+          Under 18? Fill the form out with a parent or guardian &mdash; we will need their contact
+          details before meetings start.
         </p>
       </div>
 
       <aside class="card">
         <span class="eyebrow">Spread the word</span>
-        <h3>Know somebody who'd be into this?</h3>
+        <h3>Know somebody who&rsquo;d be into this?</h3>
         <p>
-          The hardest part of starting a team isn't the robot — it's finding the first few people. If you know a
-          Millis student who'd love this, an engineer who'd mentor, or a local business owner who'd sponsor,
-          send them this page.
+          Send them this page. A student who likes building things, an engineer who would volunteer, a
+          local business owner who would sponsor &mdash; all three make the team better.
         </p>
-        <p class="mb-0">
-          <a data-contact-email href="mailto:">email us</a> · share <strong>this page</strong> with anyone who
-          should see it.
-        </p>
+        <p class="mb-0"><a data-contact-email="show" href="mailto:">email us</a></p>
       </aside>
     </div>
   </section>
-
 </main>
 
 <footer class="site-footer">
@@ -195,8 +205,8 @@
           <span class="brand__name">Millis Robotics</span>
         </a>
         <p class="small muted">
-          A student-led effort to launch a FIRST Tech Challenge team in Millis, Massachusetts, for the
-          2026–27 season.
+          Millis Robotics competes in the VEX V5 Robotics Competition. Students design, build,
+          program, and drive the robot.
         </p>
       </div>
       <div>
@@ -206,29 +216,31 @@
           <li><a href="about.html">About</a></li>
           <li><a href="news.html">News</a></li>
           <li><a href="calendar.html">Calendar</a></li>
-          <li><a href="join.html">Join / Volunteer</a></li>
+          <li><a href="sponsors.html">Sponsors</a></li>
+          <li><a href="join.html">Join</a></li>
         </ul>
       </div>
       <div>
-        <h4>FIRST resources</h4>
+        <h4>VEX resources</h4>
         <ul>
-          <li><a href="https://www.firstinspires.org/robotics/ftc" rel="noopener">What is FTC?</a></li>
-          <li><a href="https://training.firstinspires.org/" rel="noopener">Mentor &amp; student training</a></li>
-          <li><a href="https://scholarships.firstinspires.org/" rel="noopener">FIRST scholarships</a></li>
+          <li><a href="https://www.vexrobotics.com/v5/competition" rel="noopener">What is VEX V5?</a></li>
+          <li><a href="https://www.roboticseducation.org/" rel="noopener">REC Foundation</a></li>
+          <li><a href="https://www.robotevents.com/" rel="noopener">Find events on RobotEvents</a></li>
         </ul>
       </div>
       <div>
         <h4>Get in touch</h4>
         <ul>
-          <li><a data-contact-email href="mailto:">email us</a></li>
-          <li><a href="join.html">Interest form</a></li>
-          <li><a href="join.html#sponsor">Sponsor the team</a></li>
+          <li><a data-contact-email="show" href="mailto:">email us</a></li>
+          <li><a href="join.html">Student sign-up</a></li>
+          <li><a href="join.html#volunteer">Volunteer with us</a></li>
+          <li><a href="sponsors.html">Sponsor the team</a></li>
         </ul>
       </div>
     </div>
     <div class="site-footer__bottom">
-      <span>© <span data-year>2026</span> Millis Robotics</span>
-      <span>Team in formation — not yet an official school program.</span>
+      <span>&copy; <span data-year>2026</span> Millis Robotics</span>
+      <span>Millis, Massachusetts &middot; VEX V5 Robotics Competition</span>
     </div>
   </div>
 </footer>

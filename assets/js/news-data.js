@@ -3,7 +3,7 @@
    list. Posts are sorted newest-first automatically, so order doesn't matter.
 
      date    "YYYY-MM-DD"
-     tag     short label shown as a pill (Milestone, Funding, Recruiting, ...)
+     tag     short label shown as a pill (Season, Sponsors, Team, ...)
      title   headline
      summary one or two sentences — this is what shows on the home page
      body    array of paragraphs, shown on the News page
@@ -11,76 +11,63 @@
 
 window.SITE_NEWS = [
   {
+    date: "2026-08-17",
+    tag: "Season",
+    title: "Millis Robotics takes the field this season",
+    summary:
+      "Millis is entering the VEX V5 Robotics Competition — students design, build, program, and drive a robot against schools across Massachusetts.",
+    body: [
+      "VEX is a head-to-head robotics competition: two-team alliances, a fresh game every year, and matches that open with fifteen seconds of fully autonomous play before drivers take the controls.",
+      "Millis Robotics is competing in the V5 Robotics Competition, the high-school division run by the REC Foundation. Tournaments run through the fall and winter, with the Massachusetts state championship in late winter and VEX Worlds in the spring for teams that qualify.",
+      "Everything starts with the roster. Sign-ups are open now, and no experience is required to join.",
+    ],
+  },
+  {
     date: "2026-08-14",
-    tag: "Recruiting",
-    title: "The interest survey is almost live",
+    tag: "Sponsors",
+    title: "Put your business on the robot",
     summary:
-      "A short sign-up form for students who want in — and for parents and community members willing to help — goes out through the school before the end of August.",
+      "Sponsorship is open for the season. Sponsors get their name on the team shirt, on this site, and — at the top tiers — on the robot itself.",
     body: [
-      "We are finishing a short interest survey for anyone who wants to be part of the first Millis FTC team. It asks what you want to work on — building, programming, design, outreach — and which meeting times actually work for you: before school, after school, or weekends.",
-      "It is going out through the school once it is approved, and it is the single most useful thing you can do right now if you are interested. A rookie team only needs a handful of genuinely committed students to launch, and the survey is how we find them.",
+      "A competition robot is built out of aluminum, motors, and a lot of local goodwill. Sponsorship covers the robot and its parts, competition entry, travel to tournaments, and team apparel.",
+      "Tiers start at $250 and every one of them puts your name in front of the Millis community — on the team shirt worn at every event, on this website, and in the engineering notebook that judges read at every tournament.",
+      "In-kind support counts too: machining, 3D printing, materials, a place to meet, or a van on competition day are all genuinely useful to a team.",
     ],
   },
   {
-    date: "2026-08-11",
-    tag: "Funding",
-    title: "Year one, priced out line by line",
+    date: "2026-08-10",
+    tag: "Volunteer",
+    title: "Volunteer with the team",
     summary:
-      "We built a full startup budget for the 2026–27 season: roughly $4,650 on the lean end and $8,570 for a fuller build. The fundraising target is about $5,500.",
+      "Parents, alumni, engineers, machinists, coders, and anyone who likes building things — there's a role here, and it's smaller than you'd think.",
     body: [
-      "Everything a rookie FTC team needs is now itemized with sourced prices: $350 for national registration, $200 per Massachusetts qualifier, about $675 for a season-correct starter kit with the team discount, control system and batteries, this season's game elements, plus the costs first-year teams tend to forget — food at all-day competitions, transportation, and shirts.",
-      "The honest range is $4,650 to $8,570. The low end assumes the school can provide tools, a 3D printer, and transportation, and that we skip the optional upgrades in year one. We are aiming to raise about $5,500 so the team is not scrambling mid-season.",
-      "That is a number local businesses can actually move. If you sponsor us, your name goes on the back of the team shirt and on this website — and it goes directly into kits, registration, and getting students to competitions.",
+      "Students design and build the robot. Volunteers are there to be the experienced adults in the room: ask good questions, help somebody find the right tool, ride along to a tournament.",
+      "You don't need to know VEX. You don't need to teach. A few hours a week during the season is a real contribution, and the sign-up form takes two minutes.",
+      "Adults who can help with transportation, food at all-day events, fundraising, or photography are just as welcome as the ones who want to be at the workbench.",
     ],
   },
   {
-    date: "2026-08-03",
-    tag: "Mentors",
-    title: "Wanted: one community mentor",
+    date: "2026-08-05",
+    tag: "Team",
+    title: "Every student has a role",
     summary:
-      "The biggest gap right now is not money — it is one adult with an engineering or making background willing to be in the room a few hours a week.",
+      "Builders, programmers, designers, and writers all have a place on a VEX team. If you can commit the time, there's a job for you.",
     body: [
-      "FTC teams need at least one adult mentor. The role is smaller than people assume: you do not have to teach, you do not have to know FTC, and you do not have to design the robot. Students do the building. A mentor is there to be the experienced adult in the room, ask good questions, and occasionally say \"try it the other way.\"",
-      "FIRST publishes free mentor training at training.firstinspires.org, including a Mentor-Ready track and technical modules, so nobody has to start from scratch.",
-      "We are also looking for an in-school staff advisor whose commitment stays deliberately light. If you are a Millis parent, alum, teacher, or neighbor who tinkers — or you know somebody who does — please get in touch.",
+      "The robot is the obvious part — cutting and assembling the structure, mounting motors, tuning the drivetrain. But it is nowhere near the whole team.",
+      "Somebody writes the autonomous routine in VEXcode. Somebody models parts in CAD before they get built. Somebody keeps the engineering notebook, which is judged at every tournament and is how teams win the Design and Excellence awards. Somebody runs outreach, sponsorship, and the team's social accounts.",
+      "That's the pitch: you don't have to already be an engineer. You have to be willing to show up and learn something.",
     ],
   },
   {
-    date: "2026-06-18",
-    tag: "Research",
-    title: "What FIRST Massachusetts told us",
+    date: "2026-07-28",
+    tag: "Season",
+    title: "How a VEX season actually works",
     summary:
-      "A long conversation with the state program staff cleared up the calendar, the grants, and one expensive assumption we had wrong.",
+      "A new game every spring, a build through the summer and fall, tournaments all winter, and a shot at the state championship and Worlds.",
     body: [
-      "The correction first: FTC does not hand rookie teams a kit. Every part is team-purchased. Any budget that assumes free equipment is wrong from the start, which is exactly why we priced the whole thing out.",
-      "The calendar: kickoff is Saturday, September 12, 2026. Qualifiers run December through March, with the state championship in late March. Each team is offered two qualifying events, and nearly all Massachusetts events sit east of Worcester — generally under an hour from Millis. Registration is already open, and the season fee can be paid as late as the morning of our first competition.",
-      "On funding, FIRST nominates some teams for rookie grants, and there is a hardship grant for teams past year one. There is no single Massachusetts rookie sponsor to apply to — statewide companies sponsor teams individually, which means cold outreach is the job.",
-      "Two other things worth stealing: a veteran team in Sharon may be able to mentor us, and scholarships.firstinspires.org lists millions of dollars in FIRST-linked scholarships that go unclaimed every year.",
-    ],
-  },
-  {
-    date: "2026-06-14",
-    tag: "Research",
-    title: "Advice from a team that just did this",
-    summary:
-      "A student who launched a rookie FTC team a year ago walked us through what worked, what it cost, and what he forgot to budget for.",
-    body: [
-      "His minimum viable team: three genuinely committed students, a coach, and a mentor. Not thirty interested names on a list — three people who show up.",
-      "His number for year one was about $4,000, and the line items he wished he had budgeted were the unglamorous ones: food and transportation to competitions, and a starter bot so the team had something driving early.",
-      "On sponsors, his answer was blunt — cold email local companies, and keep emailing. On program choice, he pointed out that grants and guaranteed corporate money exist on the FTC side, and that finding an adult who can supervise at competitions matters more than which program you pick.",
-      "The part he flagged as hardest was not the robot. It was keeping people engaged through the pre-season administrative grind, when there is nothing built yet to show off.",
-    ],
-  },
-  {
-    date: "2026-05-28",
-    tag: "Milestone",
-    title: "The idea: bring FIRST Tech Challenge to Millis",
-    summary:
-      "Millis has no robotics team. Westwood, Franklin, Walpole, and Nobles & Greenough all do. This project started as a senior project to close that gap.",
-    body: [
-      "The first step was mapping every school around us that fields a robotics team, then reading how each program is funded and structured — and asking them directly how they got off the ground.",
-      "The pattern was consistent: every one of those teams started with a couple of students, one adult willing to help, and a fundraising plan. None of them started with a robot.",
-      "So that is the plan here — build the foundation first: a mentor, a space, a budget, and a roster. The robot comes after.",
+      "Each season has one game, revealed in the spring and played by every VEX team in the world for the next year. Teams spend the summer studying it and prototyping, and the fall building and driving.",
+      "Tournaments begin in the fall and run through the winter. Beyond head-to-head matches, teams compete in skills challenges — one minute driving, one minute fully autonomous — that are ranked against every team worldwide.",
+      "Strong results and a strong engineering notebook earn a spot at the Massachusetts state championship, and from there the VEX World Championship in the spring.",
     ],
   },
 ];

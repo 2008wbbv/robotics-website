@@ -49,7 +49,7 @@
     });
 
     /* Reset when the layout grows back to the desktop nav. */
-    window.matchMedia("(min-width: 60.0625rem)").addEventListener("change", function (event) {
+    window.matchMedia("(min-width: 62.0625rem)").addEventListener("change", function (event) {
       if (event.matches) setOpen(false);
     });
   }
@@ -228,7 +228,7 @@
   }
 
   /* ------------------------------------------------------------------------
-     Embeds — Google Form and Google Calendar
+     Embeds — Google Forms and Google Calendar
      ------------------------------------------------------------------------ */
 
   function mountEmbed(name, url, title, extras) {
@@ -259,11 +259,30 @@
     if (setup) setup.hidden = true;
   }
 
+  /* Point every "open this form in a tab" link at whatever config says, and
+     hide the link when there's no URL to send people to. */
+  function wireShareLink(attribute, url) {
+    document.querySelectorAll("[" + attribute + "]").forEach(function (link) {
+      if (isConfigured(url)) {
+        link.href = url;
+        link.hidden = false;
+      } else {
+        link.hidden = true;
+      }
+    });
+  }
+
   function initEmbeds() {
-    var form = CONFIG.interestForm || {};
+    var student = CONFIG.studentForm || {};
+    var volunteer = CONFIG.volunteerForm || {};
     var calendar = CONFIG.calendar || {};
 
-    mountEmbed("form", form.embedUrl, "Millis Robotics interest form", {
+    mountEmbed("student-form", student.embedUrl, "Student sign-up form", {
+      marginheight: "0",
+      marginwidth: "0",
+    });
+
+    mountEmbed("volunteer-form", volunteer.embedUrl, "Volunteer sign-up form", {
       marginheight: "0",
       marginwidth: "0",
     });
@@ -272,19 +291,51 @@
       scrolling: "no",
     });
 
-    /* Point every "open the form" link at whatever config says. */
-    if (isConfigured(form.shareUrl)) {
-      document.querySelectorAll("[data-form-link]").forEach(function (link) {
-        link.href = form.shareUrl;
-      });
-    }
+    wireShareLink("data-student-form-link", student.shareUrl);
+    wireShareLink("data-volunteer-form-link", volunteer.shareUrl);
+    wireShareLink("data-calendar-link", calendar.publicUrl);
+  }
 
-    if (isConfigured(calendar.publicUrl)) {
-      document.querySelectorAll("[data-calendar-link]").forEach(function (link) {
-        link.href = calendar.publicUrl;
-        link.hidden = false;
+  /* ------------------------------------------------------------------------
+     Tabs — used for the student / volunteer sign-up forms
+     ------------------------------------------------------------------------ */
+
+  function initTabs() {
+    document.querySelectorAll("[data-tabs]").forEach(function (group) {
+      var tabs = Array.prototype.slice.call(group.querySelectorAll('[role="tab"]'));
+      if (tabs.length === 0) return;
+
+      function select(tab, focus) {
+        tabs.forEach(function (other) {
+          var active = other === tab;
+          other.setAttribute("aria-selected", active ? "true" : "false");
+          other.tabIndex = active ? 0 : -1;
+          var panel = document.getElementById(other.getAttribute("aria-controls"));
+          if (panel) panel.hidden = !active;
+        });
+        if (focus) tab.focus();
+      }
+
+      /* Links like join.html#volunteer should open that tab, not just scroll. */
+      function selectFromHash() {
+        var target = tabs.filter(function (tab) {
+          return "#" + tab.id === window.location.hash;
+        })[0];
+        if (target) select(target, false);
+      }
+      window.addEventListener("hashchange", selectFromHash);
+      selectFromHash();
+
+      tabs.forEach(function (tab, position) {
+        tab.addEventListener("click", function () { select(tab, false); });
+        tab.addEventListener("keydown", function (event) {
+          var step = event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0;
+          if (!step) return;
+          event.preventDefault();
+          select(tabs[(position + step + tabs.length) % tabs.length], true);
+        });
       });
-    }
+    });
   }
 
   /* ------------------------------------------------------------------------
@@ -293,9 +344,13 @@
 
   function initFillers() {
     if (CONFIG.contactEmail) {
+      /* Every marked element gets the mailto; only data-contact-email="show"
+         swaps its label for the address itself (buttons keep their wording). */
       document.querySelectorAll("[data-contact-email]").forEach(function (node) {
         if (node.tagName === "A") node.href = "mailto:" + CONFIG.contactEmail;
-        node.textContent = CONFIG.contactEmail;
+        if (node.getAttribute("data-contact-email") === "show") {
+          node.textContent = CONFIG.contactEmail;
+        }
       });
     }
 
@@ -314,6 +369,7 @@
     renderNewsList();
     renderNewsTeasers();
     initEmbeds();
+    initTabs();
     initFillers();
   }
 

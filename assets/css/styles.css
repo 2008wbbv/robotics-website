@@ -343,7 +343,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
 }
 .site-nav a {
   display: block;
-  padding: 0.55rem 0.8rem;
+  padding: 0.55rem 0.7rem;
   border-radius: 999px;
   font-family: var(--font-display);
   font-weight: 600;
@@ -363,7 +363,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
 }
 .site-nav .nav-cta a:hover { background: var(--brand-dark); color: #fff; }
 
-@media (max-width: 60rem) {
+@media (max-width: 62rem) {
   .site-nav {
     display: none;
     position: absolute;
@@ -379,7 +379,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
   .site-nav a { padding: 0.8rem 0.9rem; border-radius: var(--radius); }
   .site-nav .nav-cta a { margin-top: 0.4rem; text-align: center; }
 }
-@media (min-width: 60.0625rem) {
+@media (min-width: 62.0625rem) {
   .nav-toggle { display: none; }
 }
 
@@ -931,3 +931,119 @@ table.data tbody tr:last-child td { border-bottom: 0; }
   }
   .banner__slide { transform: none; }
 }
+
+/* --------------------------------------------------------------------------
+   12. Sponsor tiers
+   -------------------------------------------------------------------------- */
+
+.tier-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  align-items: stretch;
+}
+
+.tier {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.4rem;
+  box-shadow: var(--shadow);
+}
+.tier__name {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 0.35rem;
+}
+.tier__price {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.6vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--brand);
+  margin-bottom: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+.tier__price small {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--ink-3);
+  margin-top: 0.35rem;
+}
+.tier ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.tier li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ink-2);
+}
+.tier li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+}
+.tier > :last-child { margin-top: auto; margin-bottom: 0; }
+
+.tier--feature {
+  border-color: color-mix(in srgb, var(--brand) 45%, transparent);
+  box-shadow: var(--shadow-lg);
+}
+.tier--feature .tier__name { color: var(--brand); }
+@media (prefers-color-scheme: dark) {
+  .tier__price { color: var(--accent); }
+  .tier--feature { border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+  .tier--feature .tier__name { color: var(--accent); }
+}
+
+/* --------------------------------------------------------------------------
+   13. Tabs (student / volunteer sign-up forms)
+   -------------------------------------------------------------------------- */
+
+.tabs__list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding: 0.3rem;
+  margin-bottom: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.tabs__tab {
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-size: 0.97rem;
+  line-height: 1;
+  padding: 0.7rem 1.15rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.tabs__tab:hover { color: var(--ink); background: var(--surface-2); }
+.tabs__tab[aria-selected="true"] { background: var(--brand); color: #fff; }
+.tabs__tab[aria-selected="true"]:hover { background: var(--brand-dark); color: #fff; }
