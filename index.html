@@ -31,6 +31,7 @@
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="roster.html">Roster</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="calendar.html">Calendar</a></li>
         <li><a href="sponsors.html">Sponsors</a></li>
@@ -43,22 +44,13 @@
 <main id="main">
 
   <!-- ======================================================================
-       HERO — the banner shuffles its photo order on every page load and then
-       rotates. To swap in real photos: drop them in assets/img/banner/ and
-       update the <img src> + alt text below. Add or remove <img> tags freely;
-       the dots and timing adapt automatically.
+       HERO — the team's own artwork stands in for a photo while we have no
+       team pictures yet. The shuffling photo banner is still supported: see
+       README section 3 to bring it back once there are real photos.
        ====================================================================== -->
-  <section class="hero">
-    <div class="banner" data-banner aria-roledescription="carousel" aria-label="Millis Dynamics team photos">
-      <div class="banner__slides" data-banner-slides>
-        <img class="banner__slide" data-banner-slide src="assets/img/banner/banner-01.svg" alt="Placeholder for a photo of the team at work." width="1600" height="900">
-        <img class="banner__slide" data-banner-slide src="assets/img/banner/banner-02.svg" alt="Placeholder for a photo of a build session." width="1600" height="900">
-        <img class="banner__slide" data-banner-slide src="assets/img/banner/banner-03.svg" alt="Placeholder for a photo of competition day." width="1600" height="900">
-        <img class="banner__slide" data-banner-slide src="assets/img/banner/banner-04.svg" alt="Placeholder for a photo of a community event." width="1600" height="900">
-        <img class="banner__slide" data-banner-slide src="assets/img/banner/banner-05.svg" alt="Placeholder for a team group photo." width="1600" height="900">
-      </div>
-
-      <div class="wrap banner__body">
+  <section class="hero hero--brand">
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
         <span class="banner__kicker">FIRST Tech Challenge &middot; Millis, MA</span>
         <h1>Design it. Build it. Drive it.</h1>
         <p>
@@ -71,11 +63,13 @@
         </div>
       </div>
 
-      <div class="banner__ui">
-        <div class="banner__dots" data-banner-dots role="group" aria-label="Choose a photo"></div>
-        <div class="banner__arrows">
-          <button class="banner__arrow" type="button" data-banner-prev aria-label="Previous photo">&lsaquo;</button>
-          <button class="banner__arrow" type="button" data-banner-next aria-label="Next photo">&rsaquo;</button>
+      <div class="hero__plate">
+        <div class="lockup">
+          <img src="assets/img/logo.svg" alt="Millis Dynamics" width="200" height="200">
+          <span>
+            <span class="lockup__word">Millis</span>
+            <span class="lockup__sub">Dynamics</span>
+          </span>
         </div>
       </div>
     </div>
@@ -259,8 +253,8 @@
           <div>
             <h2 class="mb-0">Millis business? Let&rsquo;s talk.</h2>
             <p style="margin-top:.6rem">
-              Sponsorship starts at $250, and every tier puts your name in front of the town &mdash;
-              on the team shirt, at every tournament, and on this site.
+              Sponsorship starts at $100 &mdash; which already puts your name on the back of the
+              team shirt &mdash; and you can pay at your own pace across the season.
             </p>
           </div>
           <div class="btn-row">
@@ -291,7 +285,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="about.html#team">The team</a></li>
+          <li><a href="roster.html">Roster</a></li>
           <li><a href="news.html">News</a></li>
           <li><a href="calendar.html">Calendar</a></li>
           <li><a href="sponsors.html">Sponsors</a></li>
@@ -313,6 +307,7 @@
           <li><a href="join.html">Student sign-up</a></li>
           <li><a href="join.html#volunteer">Volunteer with us</a></li>
           <li><a href="sponsors.html">Sponsor the team</a></li>
+          <li><a href="portal.html">Team portal</a></li>
         </ul>
         <div class="social-row" style="margin-top:1rem">
           <a class="social-btn btn--sm" data-social-link="github" href="#" style="padding:.5rem .85rem;font-size:.85rem"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.9 10.9c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.4-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.4.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2 0-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg> GitHub <small>soon</small></a>

@@ -300,10 +300,9 @@
      Social + support links (GitHub, Instagram, GoFundMe)
      ------------------------------------------------------------------------ */
 
-  function initSocial() {
-    var social = CONFIG.social || {};
-    document.querySelectorAll("[data-social-link]").forEach(function (node) {
-      var url = social[node.getAttribute("data-social-link")];
+  function wireLinkGroup(attribute, urls) {
+    document.querySelectorAll("[" + attribute + "]").forEach(function (node) {
+      var url = urls[node.getAttribute(attribute)];
       if (isConfigured(url)) {
         node.href = url;
         node.rel = "noopener";
@@ -316,6 +315,11 @@
         node.setAttribute("aria-disabled", "true");
       }
     });
+  }
+
+  function initSocial() {
+    wireLinkGroup("data-social-link", CONFIG.social || {});
+    wireLinkGroup("data-portal-link", CONFIG.portal || {});
   }
 
   /* ------------------------------------------------------------------------

@@ -24,6 +24,17 @@ window.SITE_CONFIG = {
     gofundme: "PASTE_GOFUNDME_URL_HERE",
   },
 
+  /* --- Internal team portal (portal.html) -------------------------------- */
+  /* Links the team uses to run itself. The portal page is unlisted and marked
+     noindex, but it is NOT private — anything reachable from a static site is
+     public to anyone with the URL. Never put passwords or private data here. */
+  portal: {
+    hcb: "PASTE_HCB_URL_HERE",          /* e.g. https://hcb.hackclub.com/your-team */
+    drive: "",                           /* optional: shared Google Drive folder */
+    budget: "",                          /* optional: the budget spreadsheet */
+    formResponses: "",                   /* optional: sign-up form responses sheet */
+  },
+
   /* --- Student sign-up form --------------------------------------------- */
   /* In Google Forms: Publish (or Send) -> Embed <> -> copy the src="..." URL.
      It usually looks like:

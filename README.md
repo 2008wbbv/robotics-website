@@ -9,11 +9,13 @@ it works.
 | File | What it is |
 | --- | --- |
 | `index.html` | Home — shuffling photo banner, what the team does, the season, news, sponsors |
-| `about.html` | The team, how FTC works, the season, the roster, commitment, FAQ |
+| `about.html` | The team, how FTC works, the season, commitment, FAQ |
+| `roster.html` | Lead roles, mentors, and the team's links |
 | `news.html` | All updates, newest first |
 | `calendar.html` | Embedded Google Calendar plus the season milestones |
 | `sponsors.html` | Sponsorship tiers, what support pays for, in-kind help, sponsor wall |
 | `join.html` | Students / volunteers / sponsors, with both Google Forms in tabs |
+| `portal.html` | Internal link hub (GitHub, HCB, …) — unlisted, not in the menu |
 
 ## Editing the things you'll actually change
 
@@ -33,6 +35,8 @@ This is the only file you need to touch to wire up the embeds.
 - **Social + support links** (`social`): `github`, `instagram`, and `gofundme`. Each has a reserved
   button on the site — fill one in and its button goes live; leave it as `PASTE_…` and the button
   shows a muted "coming soon" instead of a dead link.
+- **Portal links** (`portal`): `hcb`, plus optional `drive`, `budget`, and `formResponses`. These
+  fill the cards on `portal.html` the same way — an unset link renders as "not set up yet".
 
 Anything left as `PASTE_…` shows a short "coming soon" panel on the page instead of a broken embed,
 so the site never looks broken while you're still setting it up.
@@ -55,20 +59,46 @@ recent also appear on the home page.
 },
 ```
 
-### 3. Swap in real photos — `assets/img/banner/`
+### 3. The hero, and bringing back the photo banner
 
-The hero banner shuffles its slides into a random order on every page load, then rotates through
-them. The five files in `assets/img/banner/` are obvious placeholders — replace them with real
-photos (roughly 1600 × 900, JPG or WebP is fine) and update the `<img>` tags near the top of
-`index.html`:
+Right now the home page hero shows the team's own logo lockup on a white plate, because there are
+no team photos yet.
+
+When you have real photos, the shuffling photo banner is still fully supported — the CSS and the
+JavaScript for it are untouched. To switch back, replace the `<section class="hero hero--brand">`
+block at the top of `index.html` with:
 
 ```html
-<img class="banner__slide" data-banner-slide src="assets/img/banner/your-photo.jpg"
-     alt="Describe what's happening in the photo." width="1600" height="900">
+<section class="hero">
+  <div class="banner" data-banner aria-roledescription="carousel" aria-label="Team photos">
+    <div class="banner__slides" data-banner-slides>
+      <img class="banner__slide" data-banner-slide src="assets/img/banner/photo-1.jpg"
+           alt="Describe what's happening in the photo." width="1600" height="900">
+      <!-- add as many as you like -->
+    </div>
+    <div class="wrap banner__body">
+      <span class="banner__kicker">FIRST Tech Challenge &middot; Millis, MA</span>
+      <h1>Design it. Build it. Drive it.</h1>
+      <p>Millis Dynamics puts students behind a competition robot.</p>
+      <div class="btn-row">
+        <a class="btn btn--accent" href="join.html">Join the team</a>
+        <a class="btn btn--ghost" href="sponsors.html">Sponsor the team</a>
+      </div>
+    </div>
+    <div class="banner__ui">
+      <div class="banner__dots" data-banner-dots role="group" aria-label="Choose a photo"></div>
+      <div class="banner__arrows">
+        <button class="banner__arrow" type="button" data-banner-prev aria-label="Previous photo">&lsaquo;</button>
+        <button class="banner__arrow" type="button" data-banner-next aria-label="Next photo">&rsaquo;</button>
+      </div>
+    </div>
+  </div>
+</section>
 ```
 
-Add or remove `<img>` tags freely — the dots, arrows, and timing adapt on their own. Write real
-`alt` text for each photo.
+Photos want to be roughly 1600 × 900. The order shuffles on every page load and then rotates; the
+dots, arrows, and timing adapt to however many `<img>` tags you leave in. The old placeholder
+images are still in `assets/img/banner/` if you want to see it working before you have real ones.
 
 ### 4. Add a sponsor logo
 
@@ -79,14 +109,16 @@ replace one placeholder slot:
 <div class="sponsor-slot"><img src="assets/img/sponsors/acme.svg" alt="Acme Manufacturing"></div>
 ```
 
-Sponsorship tier amounts and benefits are plain HTML in `sponsors.html` — edit them there. The
-season fundraising goal appears once in `sponsors.html`; the "$250 and up" line also appears on
-`index.html` and `join.html`.
+Sponsorship tier amounts and benefits are plain HTML in `sponsors.html` — edit them there. Two
+promises are made in several places, so change them together if you change them at all: **every
+sponsor at $100 or more goes on the back of the team shirt**, and **sponsors can pay at their own
+pace**. Both appear on `sponsors.html`, `index.html`, and `join.html`. The season fundraising goal
+($5,500) appears once, on `sponsors.html`.
 
-### 5. Add a team member — `about.html`
+### 5. Add a team member — `roster.html`
 
-The roster lives in the `#team` section of `about.html`, above the FAQ. It currently shows the four
-open lead roles. To add a real person, copy the commented-out card that sits right above the grid:
+The roster lives on `roster.html` and currently shows the four open lead roles. To add a real
+person, copy the commented-out card that sits right above the grid:
 
 ```html
 <article class="member">
@@ -139,6 +171,16 @@ python3 -m http.server 8000
 
 The site goes live at `https://<user>.github.io/<repo>/` in a minute or two. It's all static files,
 so it works the same on Netlify, Cloudflare Pages, or any plain web host.
+
+## The team portal
+
+`portal.html` is a link hub for the team — GitHub, HCB, and whatever else you add to `config.portal`.
+It is deliberately kept out of the main menu (it is linked from the footer only) and carries a
+`noindex, nofollow` tag so search engines skip it.
+
+**It is unlisted, not private.** This is a static site with no logins, so anyone who has the URL can
+open the page. That is fine for a list of links — the tools behind them have their own logins — but
+never put passwords, personal contact details, or anything sensitive on it.
 
 ## Notes
 

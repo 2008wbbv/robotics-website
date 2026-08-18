@@ -379,7 +379,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
 }
 .site-nav .nav-cta a:hover { background: var(--brand-dark); color: #fff; }
 
-@media (max-width: 62rem) {
+@media (max-width: 68rem) {
   .site-nav {
     display: none;
     position: absolute;
@@ -395,7 +395,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
   .site-nav a { padding: 0.8rem 0.9rem; border-radius: var(--radius); }
   .site-nav .nav-cta a { margin-top: 0.4rem; text-align: center; }
 }
-@media (min-width: 62.0625rem) {
+@media (min-width: 68.0625rem) {
   .nav-toggle { display: none; }
 }
 
@@ -1181,3 +1181,164 @@ table.data tbody tr:last-child td { border-bottom: 0; }
 }
 .band .social-btn:hover { border-color: #fff; color: #fff; background: rgba(255, 255, 255, 0.18); }
 .band .social-btn small { color: rgba(255, 255, 255, 0.75); }
+
+/* --------------------------------------------------------------------------
+   16. Brand hero (used while we have no team photos)
+   -------------------------------------------------------------------------- */
+
+.hero--brand {
+  background:
+    radial-gradient(120% 130% at 78% 12%, rgba(200, 16, 46, 0.4), transparent 62%),
+    linear-gradient(160deg, #1b202b 0%, #12151d 45%, #24101a 100%);
+  color: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero__inner {
+  display: grid;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+  padding-block: clamp(2.75rem, 7vw, 4.75rem);
+}
+@media (min-width: 60rem) {
+  .hero__inner { grid-template-columns: 1.1fr 0.9fr; }
+}
+
+.hero__copy h1 { color: #fff; text-wrap: balance; }
+.hero__copy p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.15rem;
+  max-width: 40rem;
+}
+.hero__copy .btn--ghost {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(10, 12, 18, 0.28);
+}
+.hero__copy .btn--ghost:hover { border-color: #fff; background: rgba(255, 255, 255, 0.16); color: #fff; }
+
+/* The white plate stands in for a photo: it presents the team's own artwork. */
+.hero__plate {
+  background: #fff;
+  border-radius: 26px;
+  padding: clamp(1.6rem, 4vw, 2.6rem) clamp(1.4rem, 4vw, 2.4rem);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.42);
+  display: grid;
+  place-items: center;
+}
+
+.lockup {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.8rem, 2.5vw, 1.35rem);
+}
+.lockup img { width: clamp(4rem, 11vw, 6.5rem); height: auto; }
+.lockup__word {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 5.2vw, 3rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #7d1220;
+}
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .lockup__word {
+    background-image: linear-gradient(180deg, #3d0810 0%, #c8102e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+.lockup__sub {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(0.7rem, 1.7vw, 1rem);
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: #7c7c7c;
+  margin-top: 0.45rem;
+}
+
+/* --------------------------------------------------------------------------
+   17. Internal portal
+   -------------------------------------------------------------------------- */
+
+.portal-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+}
+
+.portal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+}
+.portal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: color-mix(in srgb, var(--brand) 40%, var(--line));
+  color: inherit;
+}
+.portal-card__icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--brand) 12%, transparent);
+  color: var(--brand);
+  margin-bottom: 0.7rem;
+}
+.portal-card__icon svg { width: 1.35rem; height: 1.35rem; }
+@media (prefers-color-scheme: dark) {
+  .portal-card__icon { background: color-mix(in srgb, var(--accent) 16%, transparent); color: var(--accent); }
+}
+.portal-card__name { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
+.portal-card__desc { font-size: 0.93rem; color: var(--ink-2); }
+.portal-card__go {
+  margin-top: auto;
+  padding-top: 0.9rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--brand);
+}
+@media (prefers-color-scheme: dark) {
+  .portal-card__go { color: var(--accent); }
+}
+.portal-card.is-pending {
+  border-style: dashed;
+  box-shadow: none;
+  cursor: default;
+  opacity: 0.75;
+}
+.portal-card.is-pending:hover { transform: none; box-shadow: none; border-color: var(--line); }
+.portal-card.is-pending .portal-card__go { color: var(--ink-3); }
+.portal-card.is-pending .portal-card__go::after { content: " — not set up yet"; font-weight: 500; }
+
+.notice {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  background: color-mix(in srgb, var(--accent) 14%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1.35rem;
+}
+.notice svg { width: 1.3rem; height: 1.3rem; flex: none; margin-top: 0.15rem; color: #96660a; }
+.notice p { margin: 0; font-size: 0.94rem; color: var(--ink-2); }
+@media (prefers-color-scheme: dark) {
+  .notice svg { color: var(--accent); }
+}
