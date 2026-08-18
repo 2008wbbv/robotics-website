@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Join | Millis Dynamics</title>
-<meta name="description" content="Sign up for the Millis Dynamics FIRST Tech Challenge team: student sign-up form, volunteer form, and sponsorship information.">
+<meta name="description" content="Sign up for the Millis Dynamics FIRST Tech Challenge team: the student interest form, how to volunteer, and sponsorship information.">
 <meta name="theme-color" content="#c8102e">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Join | Millis Dynamics">
-<meta property="og:description" content="Sign up for the Millis Dynamics FIRST Tech Challenge team: student sign-up form, volunteer form, and sponsorship information.">
+<meta property="og:description" content="Sign up for the Millis Dynamics FIRST Tech Challenge team: the student interest form, how to volunteer, and sponsorship information.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,7 +68,7 @@
             Build, program, design, document, or run the team&rsquo;s outreach. No experience needed, and
             the form asks which meeting times actually work for you.
           </p>
-          <p class="mb-0"><a href="#student">Go to the student form &rarr;</a></p>
+          <p class="mb-0"><a href="#form">Go to the interest form &rarr;</a></p>
         </article>
         <article class="card" id="volunteers">
           <div class="card__icon" aria-hidden="true">
@@ -78,10 +78,10 @@
           </div>
           <h3>Volunteers</h3>
           <p>
-            Parents, alumni, engineers, machinists, coders, drivers, photographers. You do not need to
-            know FTC. A few hours a week is a real contribution.
+            Parents, alumni, engineers, machinists, coders, drivers, photographers. There is no form:
+            email us and tell us what you would like to help with.
           </p>
-          <p class="mb-0"><a href="#volunteer">Go to the volunteer form &rarr;</a></p>
+          <p class="mb-0"><a href="#volunteer">How to get in touch &rarr;</a></p>
         </article>
         <article class="card" id="sponsor">
           <div class="card__icon" aria-hidden="true">
@@ -100,69 +100,81 @@
     </div>
   </section>
 
-  <section class="section section--tint section--edge" id="forms">
+  <section class="section section--tint section--edge" id="form">
     <div class="wrap" style="max-width:56rem">
       <div class="section-head">
-        <span class="eyebrow">Sign up</span>
-        <h2>Two forms, two minutes</h2>
-        <p>One for students, one for everybody else. Pick whichever fits.</p>
+        <span class="eyebrow">Students</span>
+        <h2>The interest form</h2>
+        <p>
+          Two minutes. It asks what you want to work on and which meeting times actually work for
+          you, and it is the only thing you need to do to join.
+        </p>
       </div>
 
-      <div class="tabs" data-tabs>
-        <div class="tabs__list" role="tablist" aria-label="Sign-up forms">
-          <button class="tabs__tab" type="button" role="tab" id="student" aria-controls="panel-student" aria-selected="true">I&rsquo;m a student</button>
-          <button class="tabs__tab" type="button" role="tab" id="volunteer" aria-controls="panel-volunteer" aria-selected="false" tabindex="-1">I want to volunteer</button>
-        </div>
+      <p class="btn-row" style="margin-bottom:1.5rem">
+        <a class="btn" data-student-form-link href="#" target="_blank" rel="noopener" hidden>
+          Open the form in a new tab
+        </a>
+      </p>
 
-        <div role="tabpanel" id="panel-student" aria-labelledby="student">
-          <!-- Filled in by assets/js/site.js from studentForm.embedUrl in config.js -->
-          <div class="embed embed--form" data-embed="student-form" hidden></div>
-          <div class="setup-note" data-embed-setup="student-form" hidden>
-            <span class="pill pill--accent">Coming soon</span>
-            <h3 style="margin-top:.75rem">The student form goes here</h3>
-            <p class="mb-0">
-              It is not connected yet, so <a data-contact-email="show" href="mailto:">email us</a> in the
-              meantime and we will add you to the list. (Setup: paste the form&rsquo;s embed URL into
-              <code>assets/js/config.js</code> as <code>studentForm.embedUrl</code>.)
-            </p>
-          </div>
-          <p class="btn-row" style="margin-top:1.25rem">
-            <a class="btn btn--ghost btn--sm" data-student-form-link href="#" target="_blank" rel="noopener" hidden>
-              Trouble with the form? Open it in a new tab
-            </a>
-          </p>
-        </div>
+      <!-- Filled in by assets/js/site.js from studentForm.embedUrl in config.js -->
+      <div class="embed embed--form" data-embed="student-form" hidden></div>
 
-        <div role="tabpanel" id="panel-volunteer" aria-labelledby="volunteer" hidden>
-          <!-- Filled in by assets/js/site.js from volunteerForm.embedUrl in config.js -->
-          <div class="embed embed--form" data-embed="volunteer-form" hidden></div>
-          <div class="setup-note" data-embed-setup="volunteer-form" hidden>
-            <span class="pill pill--accent">Coming soon</span>
-            <h3 style="margin-top:.75rem">The volunteer form goes here</h3>
-            <p class="mb-0">
-              Not connected yet. In the meantime just
-              <a data-contact-email="show" href="mailto:">email us</a> and say what you would like to help with.
-              (Setup: paste the form&rsquo;s embed URL into <code>assets/js/config.js</code> as
-              <code>volunteerForm.embedUrl</code>.)
-            </p>
-          </div>
-          <p class="btn-row" style="margin-top:1.25rem">
-            <a class="btn btn--ghost btn--sm" data-volunteer-form-link href="#" target="_blank" rel="noopener" hidden>
-              Trouble with the form? Open it in a new tab
-            </a>
-          </p>
-        </div>
+      <!-- Shown instead if the form URL is not set in config.js -->
+      <div class="setup-note" data-embed-setup="student-form" hidden>
+        <span class="pill pill--accent">Coming soon</span>
+        <h3 style="margin-top:.75rem">The interest form goes here</h3>
+        <p class="mb-0">
+          It is not connected yet, so <a data-contact-email="show" href="mailto:">email us</a> in the
+          meantime and we will add you to the list.
+        </p>
       </div>
 
       <noscript>
         <div class="setup-note" style="margin-top:1.25rem">
           <h3>JavaScript is off</h3>
           <p class="mb-0">
-            The sign-up forms load with JavaScript. Turn it on, or
-            <a data-contact-email="show" href="mailto:">email us</a> and we will get you signed up.
+            The form loads with JavaScript. Turn it on, use
+            <a href="https://forms.gle/KfDMLwq7tTvbS8Mb6" rel="noopener">this direct link to the form</a>,
+            or <a data-contact-email="show" href="mailto:">email us</a> and we will get you signed up.
           </p>
         </div>
       </noscript>
+    </div>
+  </section>
+
+  <section class="section" id="volunteer">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">Volunteers</span>
+        <h2>Just email us</h2>
+        <p class="lede">
+          There is no form for volunteers. Send us a note and we will take it from there.
+        </p>
+        <p>Useful things to include:</p>
+        <ul class="checks">
+          <li>What you would like to help with, or what you are good at</li>
+          <li>Roughly how much time you have</li>
+          <li>Whether you are a parent, an alum, or somebody local who just likes building things</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn" data-contact-email href="mailto:">Email us</a>
+          <a class="btn btn--ghost" href="roster.html#advisors">See the open roles</a>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3>You do not need to know FTC</h3>
+        <p>
+          Students design and build the robot. Volunteers are the experienced adults in the room:
+          ask good questions, help somebody find the right tool, ride along to a tournament.
+        </p>
+        <p>
+          FIRST publishes free mentor training if you want it, and driving, food at events, fundraising,
+          and photography all count as real help.
+        </p>
+        <p class="mb-0"><a data-contact-email="show" href="mailto:">email us</a></p>
+      </aside>
     </div>
   </section>
 

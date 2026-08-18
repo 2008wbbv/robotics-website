@@ -43,6 +43,7 @@ window.SITE_NEWS = [
     body: [
       "Students design and build the robot. Volunteers are there to be the experienced adults in the room: ask good questions, help somebody find the right tool, ride along to a tournament.",
       "You don't need to know FTC. You don't need to teach. FIRST publishes free mentor training, and a few hours a week during the season is a real contribution.",
+      "There is no form to fill in: email the team, say what you would like to help with and roughly how much time you have, and we will take it from there.",
       "Adults who can help with transportation, food at all-day events, fundraising, or photography are just as welcome as the ones who want to be at the workbench.",
     ],
   },

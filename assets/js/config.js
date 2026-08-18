@@ -36,20 +36,19 @@ window.SITE_CONFIG = {
     formResponses: "",                   /* optional: sign-up form responses sheet */
   },
 
-  /* --- Student sign-up form --------------------------------------------- */
-  /* In Google Forms: Publish (or Send) -> Embed <> -> copy the src="..." URL.
-     It usually looks like:
-     https://docs.google.com/forms/d/e/1FAIpQLS.../viewform?embedded=true */
+  /* --- Student interest form --------------------------------------------
+     The short link (forms.gle) is what we share; the long /viewform URL is
+     what the page frames. Note: the ?embedded=true variant of this form
+     currently returns a sign-in wall, so the plain viewform URL is used
+     instead. If the embed ever goes blank, clear embedUrl and the page falls
+     back to a panel with the button. */
   studentForm: {
-    embedUrl: "https://docs.google.com/forms/d/1RJyB5OMUHeqlamBBbm6lrEzw7Umq-WOROQIZRP4jhGA/viewform?embedded=true",
-    shareUrl: "https://docs.google.com/forms/d/1RJyB5OMUHeqlamBBbm6lrEzw7Umq-WOROQIZRP4jhGA/viewform",
+    embedUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeym_kJD-1Y6CntUpLuF-LRu0QjH3s7IDfTeXehPErSBVUJOA/viewform",
+    shareUrl: "https://forms.gle/KfDMLwq7tTvbS8Mb6",
   },
 
-  /* --- Volunteer / mentor form ------------------------------------------ */
-  volunteerForm: {
-    embedUrl: "PASTE_VOLUNTEER_FORM_EMBED_URL_HERE",
-    shareUrl: "",
-  },
+  /* Volunteers email us instead of filling in a form, so there is no
+     volunteer form to configure. */
 
   /* --- Team calendar ---------------------------------------------------- */
   calendar: {

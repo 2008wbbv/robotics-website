@@ -10,11 +10,11 @@ it works.
 | --- | --- |
 | `index.html` | Home: brand hero, what the team does, the season, news, sponsors |
 | `about.html` | The team, how FTC works, the season, commitment, FAQ |
-| `roster.html` | Lead roles, mentors, and the team's links |
+| `roster.html` | Leadership chart, team members, advisors and volunteers |
 | `news.html` | All updates, newest first |
 | `calendar.html` | Embedded Google Calendar plus the season milestones |
 | `sponsors.html` | Sponsorship tiers, what support pays for, in-kind help, sponsor wall |
-| `join.html` | Students / volunteers / sponsors, with both Google Forms in tabs |
+| `join.html` | The student interest form, how to volunteer, and sponsorship |
 | `portal.html` | Internal link hub (GitHub, HCB, …) — unlisted, not in the menu |
 
 ## Editing the things you'll actually change
@@ -23,11 +23,12 @@ it works.
 
 This is the only file you need to touch to wire up the embeds.
 
-- **Student form** (`studentForm`): in Google Forms, click **Publish** (or **Send**) → the
-  **embed `<>`** option → copy the `src="…"` URL → paste it as `embedUrl`. Put the normal share
-  link in `shareUrl`.
-- **Volunteer form** (`volunteerForm`): make a second form for adults who want to help, then paste
-  its URLs the same way.
+- **Student form** (`studentForm`): `embedUrl` is the URL the page frames, `shareUrl` is the
+  forms.gle link behind the "Open the form in a new tab" button. Both are already set.
+  One quirk worth knowing: this form's `?embedded=true` URL returns a sign-in wall and refuses to
+  be framed, so `embedUrl` uses the plain `/viewform` URL instead. If the embed ever shows up blank,
+  set `embedUrl` to `""` and the page falls back to a panel with the button, which always works.
+- **Volunteers** have no form; they email the team. That path is plain HTML on `join.html#volunteer`.
 - **Calendar** (`calendar`): in Google Calendar, **Settings → (your calendar) → Access permissions**
   → tick **Make available to public**, then scroll to **Integrate calendar** and copy the `src="…"`
   URL out of the embed code.
@@ -115,10 +116,15 @@ sponsor at $100 or more goes on the back of the team shirt**, and **sponsors can
 pace**. Both appear on `sponsors.html`, `index.html`, and `join.html`. The season fundraising goal
 ($5,500) appears once, on `sponsors.html`.
 
-### 5. Add a team member — `roster.html`
+### 5. Fill a role or add a person — `roster.html`
 
-The roster lives on `roster.html` and currently shows the four open lead roles. To add a real
-person, copy the commented-out card that sits right above the grid:
+The roster has three parts: the leadership chart (president, engineering, social media,
+fundraising, outreach and recruiting, and an administrative helper), the general team, and
+advisors and volunteers. Everyone on the team works on the robot; the leadership roles are what
+people take on in addition, which is what the page says.
+
+To fill a role, replace the open card with a named one. There is a commented-out template right
+above each grid:
 
 ```html
 <article class="member">
@@ -131,8 +137,12 @@ person, copy the commented-out card that sits right above the grid:
 </article>
 ```
 
-Swap the initials for a photo with `<div class="member__avatar"><img src="assets/img/team/alex.jpg" alt=""></div>`.
-Add as many link chips inside `member__links` as you like.
+Swap the initials for a photo with `<div class="member__avatar"><img src="assets/img/team/alex.jpg" alt=""></div>`,
+and add as many link chips inside `member__links` as you like.
+
+Advisors and volunteers are meant to have photos: use the `member--photo` variant (already on
+those cards), which renders a larger round headshot. Drop the images in `assets/img/team/`,
+roughly square and at least 200px.
 
 ### 6. The logo — `assets/img/logo.svg`
 
@@ -190,6 +200,8 @@ Two things to keep consistent when you edit copy:
   En dashes in ranges (`Dec–Mar`, `2026–27`) are fine.
 - **Do not promise a cost-free season.** The site says we are fundraising so cost is not a barrier
   and that we cannot promise a free season yet. Change that only when it is actually true.
+- **Student names.** The leadership cards are unnamed on purpose. Add names when you are ready,
+  and consider first names only for students.
 
 ## Notes
 

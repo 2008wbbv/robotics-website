@@ -274,25 +274,18 @@
 
   function initEmbeds() {
     var student = CONFIG.studentForm || {};
-    var volunteer = CONFIG.volunteerForm || {};
     var calendar = CONFIG.calendar || {};
 
-    mountEmbed("student-form", student.embedUrl, "Student sign-up form", {
+    mountEmbed("student-form", student.embedUrl, "Student interest form", {
       marginheight: "0",
       marginwidth: "0",
     });
 
-    mountEmbed("volunteer-form", volunteer.embedUrl, "Volunteer sign-up form", {
-      marginheight: "0",
-      marginwidth: "0",
-    });
-
-    mountEmbed("calendar", calendar.embedUrl, "Millis Robotics team calendar", {
+    mountEmbed("calendar", calendar.embedUrl, "Millis Dynamics team calendar", {
       scrolling: "no",
     });
 
     wireShareLink("data-student-form-link", student.shareUrl);
-    wireShareLink("data-volunteer-form-link", volunteer.shareUrl);
     wireShareLink("data-calendar-link", calendar.publicUrl);
   }
 
@@ -323,7 +316,7 @@
   }
 
   /* ------------------------------------------------------------------------
-     Tabs: used for the student / volunteer sign-up forms
+     Tabs (kept generic; not currently used on any page)
      ------------------------------------------------------------------------ */
 
   function initTabs() {
