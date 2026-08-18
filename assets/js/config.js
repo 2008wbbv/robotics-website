@@ -30,6 +30,16 @@ window.SITE_CONFIG = {
      noindex, but it is NOT private. Anything reachable from a static site is
      public to anyone with the URL. Never put passwords or private data here. */
   portal: {
+    /* Passcode gate for portal.html. Only the SHA-256 of the passcode lives
+       here, so the passcode itself is not in the repository. Change it by
+       running, in any terminal:
+         printf '%s' 'your-new-passcode' | shasum -a 256
+       and pasting the hash below. Set this to "" to remove the gate.
+       IMPORTANT: this keeps the page out of casual view. It is NOT security.
+       The link URLs are still in the page source, and the hash can be attacked
+       offline. For a real lock, host behind Cloudflare Access (see README). */
+    passcodeSha256: "bbd478548737e788156ce80af7065791156e05c7b0a4332279b5ddb6814abe1b",
+
     hcb: "PASTE_HCB_URL_HERE",          /* e.g. https://hcb.hackclub.com/your-team */
     drive: "",                           /* optional: shared Google Drive folder */
     budget: "",                          /* optional: the budget spreadsheet */

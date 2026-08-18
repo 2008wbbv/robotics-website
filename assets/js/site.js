@@ -382,7 +382,80 @@
      Boot
      ------------------------------------------------------------------------ */
 
+  /* ------------------------------------------------------------------------
+     Portal passcode gate
+
+     This hides the portal behind a shared passcode so the page is not readable
+     by anyone who stumbles on the URL. It is a speed bump, not security: the
+     links are in the page source and the hash can be brute-forced offline.
+     Anything that actually needs protecting belongs behind a real login.
+     ------------------------------------------------------------------------ */
+
+  var GATE_KEY = "md-portal-unlocked";
+
+  function sha256Hex(text) {
+    var bytes = new TextEncoder().encode(text);
+    return crypto.subtle.digest("SHA-256", bytes).then(function (buffer) {
+      return Array.prototype.map
+        .call(new Uint8Array(buffer), function (b) {
+          return b.toString(16).padStart(2, "0");
+        })
+        .join("");
+    });
+  }
+
+  function initGate() {
+    var gate = document.querySelector("[data-gate]");
+    var locked = document.querySelector("[data-gate-content]");
+    if (!gate || !locked) return;
+
+    var expected = ((CONFIG.portal || {}).passcodeSha256 || "").toLowerCase();
+    var form = gate.querySelector("form");
+    var input = gate.querySelector("[data-gate-input]");
+    var error = gate.querySelector("[data-gate-error]");
+
+    function unlock(remember) {
+      if (remember) {
+        try { sessionStorage.setItem(GATE_KEY, "1"); } catch (e) { /* private mode */ }
+      }
+      gate.hidden = true;
+      locked.hidden = false;
+    }
+
+    /* No passcode configured, or Web Crypto unavailable: leave it open rather
+       than locking the team out of their own page. */
+    var canHash = window.crypto && crypto.subtle && window.TextEncoder;
+    if (!expected || !canHash) {
+      unlock(false);
+      return;
+    }
+
+    var already = false;
+    try { already = sessionStorage.getItem(GATE_KEY) === "1"; } catch (e) { already = false; }
+    if (already) {
+      unlock(false);
+      return;
+    }
+
+    gate.hidden = false;
+    locked.hidden = true;
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      error.hidden = true;
+      sha256Hex(input.value.trim()).then(function (hash) {
+        if (hash === expected) {
+          unlock(true);
+        } else {
+          error.hidden = false;
+          input.select();
+        }
+      });
+    });
+  }
+
   function boot() {
+    initGate();
     initNav();
     initBanner();
     renderNewsList();

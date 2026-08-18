@@ -10,12 +10,13 @@ it works.
 | --- | --- |
 | `index.html` | Home: brand hero, what the team does, the season, news, sponsors |
 | `about.html` | The team, how FTC works, the season, commitment, FAQ |
-| `roster.html` | Leadership chart, team members, advisors and volunteers |
+| `roster.html` | Leadership chart, the full roster table, advisors and volunteers |
+| `resources.html` | FIRST resources: manuals, docs, SDK, training, scholarships, grants |
 | `news.html` | All updates, newest first |
 | `calendar.html` | Embedded Google Calendar plus the season milestones |
 | `sponsors.html` | Sponsorship tiers, what support pays for, in-kind help, sponsor wall |
 | `join.html` | The student interest form, how to volunteer, and sponsorship |
-| `portal.html` | Internal link hub (GitHub, HCB, …) — unlisted, not in the menu |
+| `portal.html` | Internal link hub (GitHub, HCB, …) behind a team passcode |
 
 ## Editing the things you'll actually change
 
@@ -38,6 +39,7 @@ This is the only file you need to touch to wire up the embeds.
   URL there when it exists and the button goes live everywhere at once.
 - **Portal links** (`portal`): `hcb`, plus optional `drive`, `budget`, and `formResponses`. These
   fill the cards on `portal.html` the same way — an unset link renders as "not set up yet".
+- **Portal passcode** (`portal.passcodeSha256`): see "The team portal" below.
 
 Anything left as `PASTE_…` shows a short "coming soon" panel on the page instead of a broken embed,
 so the site never looks broken while you're still setting it up.
@@ -116,15 +118,20 @@ sponsor at $100 or more goes on the back of the team shirt**, and **sponsors can
 pace**. Both appear on `sponsors.html`, `index.html`, and `join.html`. The season fundraising goal
 ($5,500) appears once, on `sponsors.html`.
 
-### 5. Fill a role or add a person — `roster.html`
+### 5. The roster — `roster.html`
 
-The roster has three parts: the leadership chart (president, engineering, social media,
-fundraising, outreach and recruiting, and an administrative helper), the general team, and
-advisors and volunteers. Everyone on the team works on the robot; the leadership roles are what
-people take on in addition, which is what the page says.
+Three parts:
 
-To fill a role, replace the open card with a named one. There is a commented-out template right
-above each grid:
+1. **Leadership chart** — president, engineering, social media, fundraising, outreach and
+   recruiting, and an administrative helper. Fundraising and outreach each note two open team
+   slots alongside their lead. Everyone on the team works on the robot; these roles are what
+   people take on in addition, which is what the page says.
+2. **The full roster** — a name / grade / works-on table. Add a row per member and delete the
+   "no names listed yet" row once the first name is in.
+3. **Advisors and volunteers** — cards sized for headshots.
+
+To fill a leadership role, replace the open card with a named one. There is a commented-out
+template right above each grid:
 
 ```html
 <article class="member">
@@ -158,11 +165,19 @@ crisp and readable in both light and dark mode.
 ### 7. Change the colours — top of `assets/css/styles.css`
 
 ```css
---brand: #c8102e;   /* main colour */
---accent: #ffc233;  /* highlight colour */
+--brand: #c8102e;         /* Millis red, from the logo */
+--accent: #0e7490;        /* teal: the complement of that red */
+--accent-strong: #0b5f75; /* hover state for accent buttons */
+--accent-ink: #ffffff;    /* text that sits on top of the accent */
 ```
 
-Everything else is derived from those. Dark mode follows the visitor's system setting automatically.
+Everything else is derived from those, so changing the two colours re-skins the site. Dark mode
+follows the visitor's system setting and uses a brighter teal (`#38bdd8`) so it stays legible on
+dark surfaces; the dark hero and the red band use that brighter teal too, so the primary button
+still reads as the primary button.
+
+If you swap the accent for something light, set `--accent-ink` to a dark colour so button labels
+stay readable.
 
 ## Previewing locally
 
@@ -182,15 +197,32 @@ python3 -m http.server 8000
 The site goes live at `https://<user>.github.io/<repo>/` in a minute or two. It's all static files,
 so it works the same on Netlify, Cloudflare Pages, or any plain web host.
 
-## The team portal
+## The team portal, and its passcode
 
 `portal.html` is a link hub for the team — GitHub, HCB, and whatever else you add to `config.portal`.
-It is deliberately kept out of the main menu (it is linked from the footer only) and carries a
-`noindex, nofollow` tag so search engines skip it.
+It is kept out of the main menu (linked from the footer only) and carries a `noindex, nofollow` tag
+so search engines skip it.
 
-**It is unlisted, not private.** This is a static site with no logins, so anyone who has the URL can
-open the page. That is fine for a list of links — the tools behind them have their own logins — but
-never put passwords, personal contact details, or anything sensitive on it.
+It also has a **passcode gate**. Only the SHA-256 hash of the passcode is stored, in
+`config.portal.passcodeSha256`, so the passcode itself is not in the repository. Unlocking is
+remembered for the browser session. To change the passcode:
+
+```bash
+printf '%s' 'your-new-passcode' | shasum -a 256
+```
+
+Paste the hash into `config.portal.passcodeSha256`. Set it to `""` to remove the gate entirely.
+
+**Be clear-eyed about what this is.** It is a speed bump, not security. The whole check runs in the
+browser, the link URLs are still readable in the page source, and the hash can be attacked offline.
+It keeps the page out of casual view; it does not protect anything. That is an acceptable trade here
+because the tools behind those links (GitHub, HCB) each have their own real login, and nothing
+secret is stored on the page.
+
+If you ever need real protection, the site has to move somewhere that can enforce it. The free
+option is **Cloudflare Pages + Cloudflare Access**: host the same files there, then put an Access
+policy on `/portal.html` that requires a Google login from a list of email addresses. That is
+genuine authentication, enforced before the file is served, and it needs no code changes here.
 
 ## House style
 

@@ -33,6 +33,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="roster.html">Roster</a></li>
+        <li><a href="resources.html">Resources</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="calendar.html">Calendar</a></li>
         <li><a href="sponsors.html">Sponsors</a></li>
@@ -55,6 +56,43 @@
     </div>
   </section>
 
+  <!-- The gate hides the links behind a shared passcode. It is a speed bump,
+       not security: see the note on the page and in the README. -->
+  <section class="section" data-gate hidden>
+    <div class="wrap">
+      <div class="gate">
+        <div class="gate__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="10.5" width="16" height="10.5" rx="2.5"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><path d="M12 14.5v2.5"/>
+          </svg>
+        </div>
+        <h2>Team passcode</h2>
+        <p>This page is for the team. Ask a lead if you do not have the passcode.</p>
+        <form>
+          <label class="skip-link" for="gate-input">Team passcode</label>
+          <input id="gate-input" type="password" data-gate-input placeholder="Passcode"
+                 autocomplete="current-password" autocapitalize="off" spellcheck="false" required>
+          <button class="btn" type="submit">Unlock</button>
+        </form>
+        <p class="gate__error" data-gate-error hidden>That passcode did not match. Try again.</p>
+        <p class="gate__note">
+          Everything behind this page has its own login as well. Nothing secret is stored here.
+        </p>
+      </div>
+
+      <noscript>
+        <div class="setup-note" style="margin-top:1.5rem;max-width:30rem;margin-inline:auto">
+          <h3>JavaScript is off</h3>
+          <p class="mb-0">
+            The passcode check runs in the browser, so the portal needs JavaScript.
+            <a data-contact-email="show" href="mailto:">email us</a> if you need a link directly.
+          </p>
+        </div>
+      </noscript>
+    </div>
+  </section>
+
+  <div data-gate-content hidden>
   <section class="section">
     <div class="wrap">
       <div class="notice" style="margin-bottom:2.25rem">
@@ -62,9 +100,11 @@
           <path d="M12 3.2l8.5 3.6v5.4c0 4.6-3.4 8.2-8.5 9.6-5.1-1.4-8.5-5-8.5-9.6V6.8z"/><path d="M12 9v4M12 16h.01"/>
         </svg>
         <p>
-          <strong>This page is unlisted, not private.</strong> It is kept out of the menu and out of
-          search results, but anyone with the link can open it. The tools it points to have their own
-          logins. Keep passwords, personal details, and anything sensitive off this page.
+          <strong>The passcode is a speed bump, not a lock.</strong> This page is kept out of the menu
+          and out of search results, and the passcode keeps it out of casual view, but a determined
+          person could still read the links out of the page source. The tools themselves each have
+          their own login. Keep passwords, personal details, and anything genuinely sensitive off
+          this page.
         </p>
       </div>
 
@@ -146,6 +186,7 @@
       </aside>
     </div>
   </section>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -167,6 +208,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="roster.html">Roster</a></li>
+          <li><a href="resources.html">Resources</a></li>
           <li><a href="news.html">News</a></li>
           <li><a href="calendar.html">Calendar</a></li>
           <li><a href="sponsors.html">Sponsors</a></li>

@@ -32,6 +32,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="roster.html" aria-current="page">Roster</a></li>
+        <li><a href="resources.html">Resources</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="calendar.html">Calendar</a></li>
         <li><a href="sponsors.html">Sponsors</a></li>
@@ -62,7 +63,7 @@
         <p>
           <strong>Everyone on the team works on the robot.</strong> These are the jobs people take on
           in addition to that, and every one of them is open right now. You do not need experience to
-          claim one.
+          take one on.
         </p>
       </div>
 
@@ -134,33 +135,47 @@
   </section>
 
   <section class="section section--tint section--edge" id="members">
-    <div class="wrap split">
-      <div>
+    <div class="wrap" style="max-width:52rem">
+      <div class="section-head">
         <span class="eyebrow">Team members</span>
-        <h2>The rest of the roster</h2>
-        <p class="lede">
-          Beyond the leads, the team is everyone who shows up to build, program, drive, and document.
-          Names go up here once the roster is set for the season.
+        <h2>The full roster</h2>
+        <p>
+          Everyone on the team, and what year they are in. Names go up here as students sign up.
         </p>
-        <p class="muted">
-          There is no cap and no tryout. If you want to be on this list, fill out the interest form.
-        </p>
-        <div class="btn-row">
-          <a class="btn" href="join.html">Add your name</a>
-        </div>
       </div>
 
-      <aside class="card">
-        <span class="eyebrow">How the team is organised</span>
-        <h3>One robot, several side jobs</h3>
-        <p>
-          Every member works on the robot itself. The leads above carry an extra piece of running the
-          team on top of that, so nobody is stuck doing only paperwork or only posting.
-        </p>
-        <p class="mb-0">
-          Fundraising and outreach each have room for two more people alongside their lead.
-        </p>
-      </aside>
+      <!-- Add a member by copying a row:
+      <tr>
+        <td>Alex Brooks</td>
+        <td class="grade">11</td>
+        <td class="role">Build</td>
+      </tr>
+      Delete the "nobody listed yet" row once the first name is in.
+      -->
+      <div class="table-scroll">
+        <table class="roster">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Grade</th>
+              <th scope="col">Works on</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="empty" colspan="3">No names listed yet. Sign-ups are open.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="btn-row" style="margin-top:1.5rem">
+        <a class="btn" href="join.html">Add your name</a>
+      </p>
+      <p class="small muted">
+        No cap and no tryout. Every member works on the robot; the leads above carry a piece of
+        running the team on top of that.
+      </p>
     </div>
   </section>
 
@@ -236,7 +251,7 @@
         <div class="split split--even" style="align-items:center">
           <div>
             <h2 class="mb-0">Want a seat?</h2>
-            <p style="margin-top:.6rem">Pick a role, or just say you are interested and we will find the right fit.</p>
+            <p style="margin-top:.6rem">Tell us what you would like to work on and we will find the right fit.</p>
           </div>
           <div class="btn-row">
             <a class="btn btn--accent" href="join.html">Sign up</a>
@@ -267,6 +282,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="roster.html">Roster</a></li>
+          <li><a href="resources.html">Resources</a></li>
           <li><a href="news.html">News</a></li>
           <li><a href="calendar.html">Calendar</a></li>
           <li><a href="sponsors.html">Sponsors</a></li>
