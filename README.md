@@ -16,7 +16,7 @@ it works.
 | `calendar.html` | Embedded Google Calendar plus the season milestones |
 | `sponsors.html` | Sponsorship tiers, what support pays for, in-kind help, sponsor wall |
 | `join.html` | The student interest form, how to volunteer, and sponsorship |
-| `portal.html` | Internal link hub (GitHub, HCB, …) behind a team passcode |
+| `portal.html` | Internal link hub (GitHub, HCB, …) behind a team passcode, in the nav |
 
 ## Editing the things you'll actually change
 
@@ -166,18 +166,18 @@ crisp and readable in both light and dark mode.
 
 ```css
 --brand: #c8102e;         /* Millis red, from the logo */
---accent: #0e7490;        /* teal: the complement of that red */
---accent-strong: #0b5f75; /* hover state for accent buttons */
+--accent: #a81c2b;        /* the deeper red from the logo gradient */
+--accent-strong: #8b1523; /* hover state for accent buttons */
 --accent-ink: #ffffff;    /* text that sits on top of the accent */
 ```
 
-Everything else is derived from those, so changing the two colours re-skins the site. Dark mode
-follows the visitor's system setting and uses a brighter teal (`#38bdd8`) so it stays legible on
-dark surfaces; the dark hero and the red band use that brighter teal too, so the primary button
-still reads as the primary button.
+Everything else is derived from those, so changing them re-skins the site. The palette is
+deliberately red plus grey, the same two colours as the logo. Dark mode uses a light red
+(`#ff8a99`) so the accent stays legible on dark surfaces.
 
-If you swap the accent for something light, set `--accent-ink` to a dark colour so button labels
-stay readable.
+Two places override the accent on purpose: the dark hero and the red band use a **white** accent
+button, because a red button on a red band would disappear. If you change the accent to something
+light, set `--accent-ink` to a dark colour so button labels stay readable.
 
 ## Previewing locally
 
@@ -200,8 +200,8 @@ so it works the same on Netlify, Cloudflare Pages, or any plain web host.
 ## The team portal, and its passcode
 
 `portal.html` is a link hub for the team — GitHub, HCB, and whatever else you add to `config.portal`.
-It is kept out of the main menu (linked from the footer only) and carries a `noindex, nofollow` tag
-so search engines skip it.
+It sits in the main navigation behind a lock icon, and in the footer, so the team can find it. It
+still carries a `noindex, nofollow` tag so search engines skip it.
 
 It also has a **passcode gate**. Only the SHA-256 hash of the passcode is stored, in
 `config.portal.passcodeSha256`, so the passcode itself is not in the repository. Unlocking is
