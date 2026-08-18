@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SITE CONFIG — the only file you need to edit to connect the Google Forms,
+   SITE CONFIG: the only file you need to edit to connect the Google Forms,
    the Google Calendar, and the team's social links. Nothing here is secret;
    it all ships to the browser, so only ever put public links in this file.
 
@@ -19,14 +19,15 @@ window.SITE_CONFIG = {
   /* Each of these has a reserved spot on the site. Fill one in and its button
      goes live; leave it as PASTE_... and the button shows "coming soon". */
   social: {
-    github: "https://github.com/2008wbbv",
-    instagram: "PASTE_INSTAGRAM_URL_HERE",
+    github: "https://github.com/Millis-Dynamics",
+    instagram: "https://www.instagram.com/millisdynamics/",
+    /* Fundraiser is not live yet; the button shows "coming soon" until this is set. */
     gofundme: "PASTE_GOFUNDME_URL_HERE",
   },
 
   /* --- Internal team portal (portal.html) -------------------------------- */
   /* Links the team uses to run itself. The portal page is unlisted and marked
-     noindex, but it is NOT private — anything reachable from a static site is
+     noindex, but it is NOT private. Anything reachable from a static site is
      public to anyone with the URL. Never put passwords or private data here. */
   portal: {
     hcb: "PASTE_HCB_URL_HERE",          /* e.g. https://hcb.hackclub.com/your-team */

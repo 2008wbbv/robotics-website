@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Millis Robotics — site behaviour
+   Millis Dynamics site behaviour
    Plain JavaScript, no dependencies, no build step. Loaded on every page
    after config.js and (where needed) news-data.js.
    ========================================================================== */
@@ -55,7 +55,7 @@
   }
 
   /* ------------------------------------------------------------------------
-     Hero banner — shuffles the photo order on every page load, then rotates
+     Hero banner: shuffles the photo order on every page load, then rotates
      ------------------------------------------------------------------------ */
 
   var SLIDE_MS = 6500;
@@ -181,7 +181,7 @@
 
     var posts = sortedPosts();
     if (posts.length === 0) {
-      host.appendChild(el("p", "muted", "No updates posted yet — check back soon."));
+      host.appendChild(el("p", "muted", "No updates posted yet. Check back soon."));
       return;
     }
 
@@ -207,7 +207,7 @@
     var limit = parseInt(host.getAttribute("data-news-teasers"), 10);
     var posts = sortedPosts().slice(0, isNaN(limit) ? 3 : limit);
     if (posts.length === 0) {
-      host.appendChild(el("p", "muted", "No updates posted yet — check back soon."));
+      host.appendChild(el("p", "muted", "No updates posted yet. Check back soon."));
       return;
     }
 
@@ -228,7 +228,7 @@
   }
 
   /* ------------------------------------------------------------------------
-     Embeds — Google Forms and Google Calendar
+     Embeds: Google Forms and Google Calendar
      ------------------------------------------------------------------------ */
 
   function mountEmbed(name, url, title, extras) {
@@ -323,7 +323,7 @@
   }
 
   /* ------------------------------------------------------------------------
-     Tabs — used for the student / volunteer sign-up forms
+     Tabs: used for the student / volunteer sign-up forms
      ------------------------------------------------------------------------ */
 
   function initTabs() {

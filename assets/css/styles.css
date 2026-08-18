@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Millis Robotics — site styles
+   Millis Dynamics site styles
    Single stylesheet, no build step. Edit the tokens below to re-skin the site.
    ========================================================================== */
 
@@ -8,7 +8,7 @@
    -------------------------------------------------------------------------- */
 
 :root {
-  /* Brand — swap these three to change the whole site's colour identity */
+  /* Brand: swap these three to change the whole site's colour identity */
   --brand: #c8102e;          /* Millis red */
   --brand-dark: #9c0c23;
   --accent: #ffc233;         /* gold / hive accent */
@@ -297,7 +297,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
   color: var(--ink);
 }
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  /* background-image, not the `background` shorthand — the shorthand would
+  /* background-image, not the `background` shorthand; the shorthand would
      reset background-clip and paint the gradient as a solid block. */
   .brand__name {
     background-image: linear-gradient(180deg, #3d0810 0%, var(--brand) 100%);
@@ -1326,7 +1326,7 @@ table.data tbody tr:last-child td { border-bottom: 0; }
 }
 .portal-card.is-pending:hover { transform: none; box-shadow: none; border-color: var(--line); }
 .portal-card.is-pending .portal-card__go { color: var(--ink-3); }
-.portal-card.is-pending .portal-card__go::after { content: " — not set up yet"; font-weight: 500; }
+.portal-card.is-pending .portal-card__go::after { content: " (not set up yet)"; font-weight: 500; }
 
 .notice {
   display: flex;

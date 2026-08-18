@@ -8,7 +8,7 @@ it works.
 
 | File | What it is |
 | --- | --- |
-| `index.html` | Home — shuffling photo banner, what the team does, the season, news, sponsors |
+| `index.html` | Home: brand hero, what the team does, the season, news, sponsors |
 | `about.html` | The team, how FTC works, the season, commitment, FAQ |
 | `roster.html` | Lead roles, mentors, and the team's links |
 | `news.html` | All updates, newest first |
@@ -32,9 +32,9 @@ This is the only file you need to touch to wire up the embeds.
   → tick **Make available to public**, then scroll to **Integrate calendar** and copy the `src="…"`
   URL out of the embed code.
 - **Contact email** (`contactEmail`): every "email us" link on the site picks it up automatically.
-- **Social + support links** (`social`): `github`, `instagram`, and `gofundme`. Each has a reserved
-  button on the site — fill one in and its button goes live; leave it as `PASTE_…` and the button
-  shows a muted "coming soon" instead of a dead link.
+- **Social + support links** (`social`): `github` and `instagram` are live. `gofundme` is still
+  `PASTE_…`, so its button shows a muted "coming soon" rather than a dead link; paste the fundraiser
+  URL there when it exists and the button goes live everywhere at once.
 - **Portal links** (`portal`): `hcb`, plus optional `drive`, `budget`, and `formResponses`. These
   fill the cards on `portal.html` the same way — an unset link renders as "not set up yet".
 
@@ -181,6 +181,15 @@ It is deliberately kept out of the main menu (it is linked from the footer only)
 **It is unlisted, not private.** This is a static site with no logins, so anyone who has the URL can
 open the page. That is fine for a list of links — the tools behind them have their own logins — but
 never put passwords, personal contact details, or anything sensitive on it.
+
+## House style
+
+Two things to keep consistent when you edit copy:
+
+- **No em dashes** anywhere in visible text. Use a comma, a colon, a full stop, or brackets instead.
+  En dashes in ranges (`Dec–Mar`, `2026–27`) are fine.
+- **Do not promise a cost-free season.** The site says we are fundraising so cost is not a barrier
+  and that we cannot promise a free season yet. Change that only when it is actually true.
 
 ## Notes
 
