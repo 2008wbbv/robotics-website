@@ -1,6 +1,6 @@
-# Millis Robotics — team website
+# Millis Dynamics — team website
 
-Static website for the Millis Robotics VEX V5 Robotics Competition team.
+Static website for Millis Dynamics, the FIRST Tech Challenge team in Millis, Massachusetts.
 Plain HTML, CSS, and JavaScript — no build step, no dependencies, no framework. Open a file and
 it works.
 
@@ -9,7 +9,7 @@ it works.
 | File | What it is |
 | --- | --- |
 | `index.html` | Home — shuffling photo banner, what the team does, the season, news, sponsors |
-| `about.html` | The team, how VEX works, what a season looks like, commitment, FAQ |
+| `about.html` | The team, how FTC works, the season, the roster, commitment, FAQ |
 | `news.html` | All updates, newest first |
 | `calendar.html` | Embedded Google Calendar plus the season milestones |
 | `sponsors.html` | Sponsorship tiers, what support pays for, in-kind help, sponsor wall |
@@ -30,6 +30,9 @@ This is the only file you need to touch to wire up the embeds.
   → tick **Make available to public**, then scroll to **Integrate calendar** and copy the `src="…"`
   URL out of the embed code.
 - **Contact email** (`contactEmail`): every "email us" link on the site picks it up automatically.
+- **Social + support links** (`social`): `github`, `instagram`, and `gofundme`. Each has a reserved
+  button on the site — fill one in and its button goes live; leave it as `PASTE_…` and the button
+  shows a muted "coming soon" instead of a dead link.
 
 Anything left as `PASTE_…` shows a short "coming soon" panel on the page instead of a broken embed,
 so the site never looks broken while you're still setting it up.
@@ -80,12 +83,37 @@ Sponsorship tier amounts and benefits are plain HTML in `sponsors.html` — edit
 season fundraising goal appears once in `sponsors.html`; the "$250 and up" line also appears on
 `index.html` and `join.html`.
 
-### 5. Swap in the real logo — `assets/img/logo.svg`
+### 5. Add a team member — `about.html`
 
-Replace the file, keeping the name `assets/img/logo.svg` (square artwork works best). Also update
-`assets/img/favicon.svg` for the browser-tab icon.
+The roster lives in the `#team` section of `about.html`, above the FAQ. It currently shows the four
+open lead roles. To add a real person, copy the commented-out card that sits right above the grid:
 
-### 6. Change the colours — top of `assets/css/styles.css`
+```html
+<article class="member">
+  <div class="member__avatar" aria-hidden="true">AB</div>
+  <span class="member__name">Alex Brooks</span>
+  <span class="member__role">Build lead</span>
+  <div class="member__links">
+    <a href="https://github.com/username" rel="noopener">GitHub</a>
+  </div>
+</article>
+```
+
+Swap the initials for a photo with `<div class="member__avatar"><img src="assets/img/team/alex.jpg" alt=""></div>`.
+Add as many link chips inside `member__links` as you like.
+
+### 6. The logo — `assets/img/logo.svg`
+
+The robot-arm mark is drawn as SVG so it stays sharp at every size. **It is a recreation of the
+Millis Dynamics logo, not the original artwork file.** To use the real file instead, save it as
+`assets/img/logo.png` and change the three `<img src="assets/img/logo.svg">` references in each
+page (header, footer, and the page-head watermark) — or just overwrite `logo.svg` with the real
+SVG export, which needs no code changes at all. `assets/img/favicon.svg` is the browser-tab icon.
+
+The "MILLIS / DYNAMICS" wordmark next to the mark is live HTML text, not an image, so it stays
+crisp and readable in both light and dark mode.
+
+### 7. Change the colours — top of `assets/css/styles.css`
 
 ```css
 --brand: #c8102e;   /* main colour */
@@ -114,6 +142,8 @@ so it works the same on Netlify, Cloudflare Pages, or any plain web host.
 
 ## Notes
 
-- Event dates on the calendar page are generic season milestones. Confirm real tournament dates on
-  [RobotEvents](https://www.robotevents.com/) and put them on the team's Google Calendar.
+- Season milestones on the calendar page come from the FTC schedule (kickoff September 12, 2026;
+  qualifiers December–March; state championship late March). Confirm specific event dates as they
+  are published and put them on the team's Google Calendar.
+- The sponsorship goal ($5,500) and the tier amounts are plain HTML in `sponsors.html`.
 - Nothing here collects data itself; the only inputs are the embedded Google Forms and Calendar.

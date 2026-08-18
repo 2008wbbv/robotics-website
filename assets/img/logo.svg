@@ -1,23 +1,43 @@
-<!-- PLACEHOLDER LOGO — replace this file with the team's real logo (keep the filename
-     assets/img/logo.svg, or update the <img src> in each page's header). Square artwork
-     works best; the header renders it at 42×42 and the footer at 34×34. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Millis Robotics placeholder logo">
+<!-- Millis Dynamics robot-arm mark, drawn as SVG so it stays crisp at any size.
+     To use the original artwork file instead, save it as assets/img/logo.png and
+     change the <img src="assets/img/logo.svg"> references in the page headers. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Millis Dynamics">
   <defs>
-    <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#e01734"/>
-      <stop offset="1" stop-color="#9c0c23"/>
+    <linearGradient id="mdUpper" x1="0.1" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#150a0c"/>
+      <stop offset="0.5" stop-color="#5c0f19"/>
+      <stop offset="1" stop-color="#a81c2b"/>
+    </linearGradient>
+    <linearGradient id="mdFore" x1="0" y1="0" x2="1" y2="0.4">
+      <stop offset="0" stop-color="#100809"/>
+      <stop offset="0.65" stop-color="#280910"/>
+      <stop offset="1" stop-color="#4d0f18"/>
+    </linearGradient>
+    <linearGradient id="mdBase" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#93171f"/>
+      <stop offset="1" stop-color="#6c0e18"/>
     </linearGradient>
   </defs>
-  <!-- hex body -->
-  <path d="M60 5l47.6 27.5v55L60 115 12.4 87.5v-55z" fill="url(#lg)"/>
-  <path d="M60 13.5l40.2 23.2v46.6L60 106.5 19.8 83.3V36.7z" fill="none" stroke="#ffc233" stroke-width="3"/>
-  <!-- gear teeth hint -->
-  <g fill="#ffc233">
-    <rect x="55" y="0" width="10" height="9" rx="2"/>
-    <rect x="55" y="111" width="10" height="9" rx="2"/>
-    <rect x="4" y="55" width="9" height="10" rx="2"/>
-    <rect x="107" y="55" width="9" height="10" rx="2"/>
+
+  <!-- forearm -->
+  <path d="M46 14h74v40H46z" fill="url(#mdFore)"/>
+
+  <!-- gripper -->
+  <g fill="#7c7c7c">
+    <path d="M134 4h8v19h-6a6 6 0 0 0-6 6v11a6 6 0 0 0 6 6h6v19h-8a17 17 0 0 1-17-17V21a17 17 0 0 1 17-17z"/>
+    <path d="M140 5l50 10a5 5 0 0 1-1 10l-49-2z"/>
+    <path d="M140 65l50-10a5 5 0 0 0-1-10l-49 2z"/>
   </g>
-  <!-- M mark -->
-  <path d="M38 82V40h11l11 20 11-20h11v42H71V58L60 77 49 58v24z" fill="#ffffff"/>
+
+  <!-- upper arm: stroked so the shoulder gets a true round cap -->
+  <path d="M24 36 96 126" stroke="url(#mdUpper)" stroke-width="45" stroke-linecap="round" fill="none"/>
+
+  <!-- base: rounded shoulder, then a stepped foot out to the right -->
+  <path d="M15 198c0-42 8-75 32-96 13-11 34-8 42 8l14 28h13c8 0 15 5 19 12l22 48z" fill="url(#mdBase)"/>
+
+  <!-- joints -->
+  <circle cx="24" cy="36" r="13" fill="#fff"/>
+  <circle cx="24" cy="36" r="8" fill="#7c7c7c"/>
+  <circle cx="92" cy="120" r="22" fill="#fff"/>
+  <circle cx="92" cy="120" r="14.5" fill="#7c7c7c"/>
 </svg>

@@ -297,6 +297,28 @@
   }
 
   /* ------------------------------------------------------------------------
+     Social + support links (GitHub, Instagram, GoFundMe)
+     ------------------------------------------------------------------------ */
+
+  function initSocial() {
+    var social = CONFIG.social || {};
+    document.querySelectorAll("[data-social-link]").forEach(function (node) {
+      var url = social[node.getAttribute("data-social-link")];
+      if (isConfigured(url)) {
+        node.href = url;
+        node.rel = "noopener";
+        node.classList.remove("is-pending");
+        node.removeAttribute("aria-disabled");
+      } else {
+        /* Keep the spot on the page, but don't offer a link that goes nowhere. */
+        node.removeAttribute("href");
+        node.classList.add("is-pending");
+        node.setAttribute("aria-disabled", "true");
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------------
      Tabs — used for the student / volunteer sign-up forms
      ------------------------------------------------------------------------ */
 
@@ -369,6 +391,7 @@
     renderNewsList();
     renderNewsTeasers();
     initEmbeds();
+    initSocial();
     initTabs();
     initFillers();
   }

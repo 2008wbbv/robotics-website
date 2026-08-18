@@ -1,21 +1,28 @@
 /* ==========================================================================
-   SITE CONFIG — this is the only file you need to edit to connect the
-   Google Forms and the Google Calendar. Nothing here is secret; it all ships
-   to the browser, so only ever put public links in this file.
+   SITE CONFIG — the only file you need to edit to connect the Google Forms,
+   the Google Calendar, and the team's social links. Nothing here is secret;
+   it all ships to the browser, so only ever put public links in this file.
 
-   Anything left as "PASTE_..." shows a friendly setup panel on the page
-   instead of a broken embed.
+   Anything left as "PASTE_..." shows a friendly "coming soon" state instead
+   of a broken embed or a dead link.
    ========================================================================== */
 
 window.SITE_CONFIG = {
   /* --- Team identity ---------------------------------------------------- */
-  teamName: "Millis Robotics",
-  teamTagline: "VEX V5 Robotics Competition · Millis, MA",
+  teamName: "Millis Dynamics",
+  teamTagline: "FIRST Tech Challenge · Millis, MA",
   seasonName: "2026–27 season",
 
-  /* Public contact address for the team. TODO: replace with the real one
-     (a team Gmail is better than a personal address). */
-  contactEmail: "millisrobotics@gmail.com",
+  contactEmail: "MillisDynamics@gmail.com",
+
+  /* --- Social + support links ------------------------------------------- */
+  /* Each of these has a reserved spot on the site. Fill one in and its button
+     goes live; leave it as PASTE_... and the button shows "coming soon". */
+  social: {
+    github: "https://github.com/2008wbbv",
+    instagram: "PASTE_INSTAGRAM_URL_HERE",
+    gofundme: "PASTE_GOFUNDME_URL_HERE",
+  },
 
   /* --- Student sign-up form --------------------------------------------- */
   /* In Google Forms: Publish (or Send) -> Embed <> -> copy the src="..." URL.
@@ -27,8 +34,6 @@ window.SITE_CONFIG = {
   },
 
   /* --- Volunteer / mentor form ------------------------------------------ */
-  /* Make a second Google Form for adults who want to help, then paste its
-     embed and share URLs here the same way. */
   volunteerForm: {
     embedUrl: "PASTE_VOLUNTEER_FORM_EMBED_URL_HERE",
     shareUrl: "",
@@ -36,14 +41,10 @@ window.SITE_CONFIG = {
 
   /* --- Team calendar ---------------------------------------------------- */
   calendar: {
-    /* In Google Calendar: Settings -> (pick the calendar) -> Integrate calendar
-       -> Embed code -> copy the src="..." URL. The calendar must be set to
-       "Make available to public" for visitors to see it. */
+    /* Google Calendar: Settings -> (pick the calendar) -> Integrate calendar
+       -> Embed code -> copy the src="..." URL. The calendar must be public. */
     embedUrl: "PASTE_GOOGLE_CALENDAR_EMBED_URL_HERE",
-
-    /* Optional: the public "add to your own calendar" link. */
     publicUrl: "",
-
     timeZone: "America/New_York",
   },
 };

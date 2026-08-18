@@ -290,18 +290,34 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
 .brand__name {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.08rem;
-  letter-spacing: -0.015em;
-  line-height: 1.1;
+  font-size: 1.18rem;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  /* background-image, not the `background` shorthand — the shorthand would
+     reset background-clip and paint the gradient as a solid block. */
+  .brand__name {
+    background-image: linear-gradient(180deg, #3d0810 0%, var(--brand) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  @media (prefers-color-scheme: dark) {
+    .brand__name { background-image: linear-gradient(180deg, #ffa8b3 0%, #e63950 100%); }
+  }
 }
 .brand__tag {
   display: block;
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
+  font-family: var(--font-display);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--ink-3);
+  margin-top: 3px;
 }
 
 .nav-toggle {
@@ -1047,3 +1063,121 @@ table.data tbody tr:last-child td { border-bottom: 0; }
 .tabs__tab:hover { color: var(--ink); background: var(--surface-2); }
 .tabs__tab[aria-selected="true"] { background: var(--brand); color: #fff; }
 .tabs__tab[aria-selected="true"]:hover { background: var(--brand-dark); color: #fff; }
+
+/* --------------------------------------------------------------------------
+   14. Team members
+   -------------------------------------------------------------------------- */
+
+.member-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem;
+  box-shadow: var(--shadow);
+}
+.member__avatar {
+  width: 3.25rem;
+  height: 3.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  margin-bottom: 0.8rem;
+  background: color-mix(in srgb, var(--brand) 12%, transparent);
+  color: var(--brand);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  overflow: hidden;
+}
+.member__avatar img { width: 100%; height: 100%; object-fit: cover; }
+@media (prefers-color-scheme: dark) {
+  .member__avatar { background: color-mix(in srgb, var(--accent) 16%, transparent); color: var(--accent); }
+}
+.member__name { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
+.member__role { font-size: 0.88rem; color: var(--ink-3); }
+.member__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+}
+.member__links a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.28rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-2);
+}
+.member__links a:hover { border-color: var(--brand); color: var(--brand); }
+
+.member--open {
+  border-style: dashed;
+  box-shadow: none;
+  background: transparent;
+}
+.member--open .member__avatar { background: var(--surface-2); color: var(--ink-3); }
+
+/* --------------------------------------------------------------------------
+   15. Social + support buttons
+   -------------------------------------------------------------------------- */
+
+.social-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-size: 0.95rem;
+  line-height: 1;
+  padding: 0.72rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease, transform 0.12s ease;
+}
+.social-btn:hover { border-color: var(--brand); color: var(--brand); transform: translateY(-1px); }
+.social-btn svg { width: 1.15rem; height: 1.15rem; flex: none; }
+.social-btn small {
+  display: none;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--ink-3);
+}
+.social-btn.is-pending {
+  opacity: 0.62;
+  cursor: default;
+  border-style: dashed;
+}
+.social-btn.is-pending:hover { border-color: var(--line); color: var(--ink); transform: none; }
+.social-btn.is-pending small { display: inline; }
+
+/* On the dark callout band */
+.band .social-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+.band .social-btn:hover { border-color: #fff; color: #fff; background: rgba(255, 255, 255, 0.18); }
+.band .social-btn small { color: rgba(255, 255, 255, 0.75); }
