@@ -16,7 +16,7 @@ it works.
 | `calendar.html` | Embedded Google Calendar plus the season milestones |
 | `sponsors.html` | Sponsorship tiers, what support pays for, in-kind help, sponsor wall |
 | `join.html` | The student interest form, how to volunteer, and sponsorship |
-| `portal.html` | Internal link hub (GitHub, HCB, …) behind a team passcode, in the nav |
+| `portal.html` | Team hub behind a passcode: tool links, the schedule, the build workflow, software |
 
 ## Editing the things you'll actually change
 
@@ -37,8 +37,12 @@ This is the only file you need to touch to wire up the embeds.
 - **Social + support links** (`social`): `github` and `instagram` are live. `gofundme` is still
   `PASTE_…`, so its button shows a muted "coming soon" rather than a dead link; paste the fundraiser
   URL there when it exists and the button goes live everywhere at once.
-- **Portal links** (`portal`): `hcb`, plus optional `drive`, `budget`, and `formResponses`. These
-  fill the cards on `portal.html` the same way — an unset link renders as "not set up yet".
+- **Portal links** (`portal`): `drive`, `discord`, `formResponses`, `inventory`, `budget`, and
+  `firstDashboard` are live. `hcb` and `schedule` are still empty, so their cards read "not set up
+  yet" instead of going nowhere. Fill one in and it goes live with no other changes.
+- **Portal video** (`portal.videoEmbedUrl`): the embed URL, not the watch URL. On YouTube, hit
+  **Share → Embed** and copy the `src="…"` value; it looks like `https://www.youtube.com/embed/ID`.
+  `portal.videoTitle` is the iframe's accessible title.
 - **Portal passcode** (`portal.passcodeSha256`): see "The team portal" below.
 
 Anything left as `PASTE_…` shows a short "coming soon" panel on the page instead of a broken embed,
@@ -199,9 +203,25 @@ so it works the same on Netlify, Cloudflare Pages, or any plain web host.
 
 ## The team portal, and its passcode
 
-`portal.html` is a link hub for the team — GitHub, HCB, and whatever else you add to `config.portal`.
-It sits in the main navigation behind a lock icon, and in the footer, so the team can find it. It
-still carries a `noindex, nofollow` tag so search engines skip it.
+`portal.html` is the team's own page. It sits in the main navigation behind a lock icon, and in the
+footer, so the team can find it, and it carries a `noindex, nofollow` tag so search engines skip it.
+Five things live on it:
+
+1. **The forms reminder**, at the very top, because unsigned consent forms are what stops students
+   competing every year.
+2. **Tool links** — Drive, Discord, GitHub, FIRST Dashboard, sign-up responses, inventory, budget,
+   HCB. Each one is a key in `config.portal`; an empty key renders as "not set up yet".
+3. **The schedule** (`#schedule`) — the same Google Calendar as the public calendar page, plus three
+   cards for meetings, competition days, and fixed dates. **The "Weekly meetings" card has a
+   placeholder line in it**: replace it with the real standing days and times once they are set.
+4. **The workflow** (`#workflow`) — the five-step manual → Onshape → build → VS Code → notebook loop,
+   the ground rules, and a card per piece of software to install. Those software links are plain
+   HTML in `PORTAL_CARDS`/`SOFTWARE` in the page generator, not in `config.js`, since they are the
+   same for every team.
+5. **The video** (`#video`) — an empty slot until `portal.videoEmbedUrl` is set.
+
+Adding a whole new card takes two edits: the key in `config.js`, and a matching entry in
+`PORTAL_CARDS`. Filling an existing one takes only the first.
 
 It also has a **passcode gate**. Only the SHA-256 hash of the passcode is stored, in
 `config.portal.passcodeSha256`, so the passcode itself is not in the repository. Unlocking is

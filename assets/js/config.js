@@ -40,10 +40,24 @@ window.SITE_CONFIG = {
        offline. For a real lock, host behind Cloudflare Access (see README). */
     passcodeSha256: "bbd478548737e788156ce80af7065791156e05c7b0a4332279b5ddb6814abe1b",
 
-    hcb: "PASTE_HCB_URL_HERE",          /* e.g. https://hcb.hackclub.com/your-team */
-    drive: "",                           /* optional: shared Google Drive folder */
-    budget: "",                          /* optional: the budget spreadsheet */
-    formResponses: "",                   /* optional: sign-up form responses sheet */
+    /* Each key here fills the matching card on portal.html. Leave one empty and
+       its card shows "not set up yet" instead of a dead link. */
+    drive: "https://drive.google.com/drive/folders/1t2Mij5QA4LeUr5weP_5BVyNqVYZ9VLsU?usp=sharing",
+    discord: "https://discord.gg/kSbtpCDnf",
+    formResponses: "https://docs.google.com/spreadsheets/d/1KJ82b4RXWSTRr7RkEqjJdOaUIIYGwO3EizmrG4NOAqw/edit",
+    inventory: "https://docs.google.com/spreadsheets/d/15huBVR3wGVHMzBNDohF-3nHLABlXyR-wipaf0EWR3EA/edit",
+    budget: "https://docs.google.com/spreadsheets/d/1KFBno9qNHBvBgTpr_B8x2O9Idk5T-WOkQ0bCiKN8F24/edit",
+    firstDashboard: "https://my.firstinspires.org/Dashboard/",
+
+    hcb: "PASTE_HCB_URL_HERE",           /* e.g. https://hcb.hackclub.com/your-team */
+    schedule: "",                        /* optional: the meeting-schedule doc or sheet */
+
+    /* Optional training video shown on the portal. Use the EMBED url, not the
+       watch url: on YouTube, Share -> Embed, and copy the src="..." value.
+       It looks like https://www.youtube.com/embed/VIDEO_ID
+       Leave it empty and the page shows a short "paste it here" panel instead. */
+    videoEmbedUrl: "",
+    videoTitle: "Getting started with FTC",
   },
 
   /* --- Student interest form --------------------------------------------

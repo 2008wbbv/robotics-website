@@ -96,16 +96,18 @@
   <div data-gate-content hidden>
   <section class="section">
     <div class="wrap">
+      <!-- Forms are the one thing that actually stops a student competing, so
+           the reminder sits above everything else on the page. -->
       <div class="notice" style="margin-bottom:2.25rem">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 3.2l8.5 3.6v5.4c0 4.6-3.4 8.2-8.5 9.6-5.1-1.4-8.5-5-8.5-9.6V6.8z"/><path d="M12 9v4M12 16h.01"/>
+          <rect x="2.8" y="5" width="18.4" height="14" rx="2.4"/><path d="M3.2 7.2L12 13l8.8-5.8"/>
         </svg>
         <p>
-          <strong>The passcode is a speed bump, not a lock.</strong> This page is kept out of the menu
-          and out of search results, and the passcode keeps it out of casual view, but a determined
-          person could still read the links out of the page source. The tools themselves each have
-          their own login. Keep passwords, personal details, and anything genuinely sensitive off
-          this page.
+          <strong>Email your forms in.</strong> Consent and release forms have to be signed and on
+          file before you can compete, and they are what holds people up every single year. Sign
+          them in the <strong>FIRST Dashboard</strong>, then send anything on paper to
+          <a data-contact-email="show" href="mailto:">the team email</a>. Do it the day you get
+          them, not the week of the tournament.
         </p>
       </div>
 
@@ -116,12 +118,60 @@
       </div>
 
       <div class="portal-grid">
+        <a class="portal-card" data-portal-link="drive" href="#" target="_blank" rel="noopener">
+          <span class="portal-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5A1.5 1.5 0 0 1 5.5 6h4l2 2.5h7A1.5 1.5 0 0 1 20 10v7.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5z"/></svg>
+          </span>
+          <span class="portal-card__name">Team Drive</span>
+          <span class="portal-card__desc">Everything we write down: the engineering notebook, meeting notes, forms, and photos.</span>
+          <span class="portal-card__go">Open</span>
+        </a>
+        <a class="portal-card" data-portal-link="discord" href="#" target="_blank" rel="noopener">
+          <span class="portal-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.5 5.3A17 17 0 0 0 15.3 4l-.3.5a15.8 15.8 0 0 1 3.7 1.2 14 14 0 0 0-13.4 0A15.8 15.8 0 0 1 9 4.5L8.7 4a17 17 0 0 0-4.2 1.3C1.9 9.2 1.2 13 1.6 16.7A17.2 17.2 0 0 0 6.8 19l1-1.7a11 11 0 0 1-1.7-.8l.4-.3a12.3 12.3 0 0 0 10.4 0l.4.3a11 11 0 0 1-1.7.8l1 1.7a17.2 17.2 0 0 0 5.2-2.3c.5-4.3-.7-8.1-2.3-11.4zM8.4 14.4c-1 0-1.9-.9-1.9-2.1 0-1.2.8-2.1 1.9-2.1s1.9.9 1.9 2.1c0 1.2-.8 2.1-1.9 2.1zm7.2 0c-1 0-1.9-.9-1.9-2.1 0-1.2.8-2.1 1.9-2.1s1.9.9 1.9 2.1c0 1.2-.8 2.1-1.9 2.1z"/></svg>
+          </span>
+          <span class="portal-card__name">Discord</span>
+          <span class="portal-card__desc">Day-to-day chat. Questions between meetings get answered here, not by email.</span>
+          <span class="portal-card__go">Open</span>
+        </a>
         <a class="portal-card" data-social-link="github" href="#" target="_blank" rel="noopener">
           <span class="portal-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.9 10.9c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.4-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.4.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2 0-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.9 10.9c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.4-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.4.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2 0-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
           </span>
           <span class="portal-card__name">GitHub</span>
           <span class="portal-card__desc">Robot code, this website, and anything else we version-control.</span>
+          <span class="portal-card__go">Open</span>
+        </a>
+        <a class="portal-card" data-portal-link="firstDashboard" href="#" target="_blank" rel="noopener">
+          <span class="portal-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.8 18a8.7 8.7 0 1 1 16.4 0"/><path d="M12 18l3.8-4.8"/><circle cx="12" cy="18" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <span class="portal-card__name">FIRST Dashboard</span>
+          <span class="portal-card__desc">The official FIRST account: team registration, the roster, and the consent forms every student needs on file.</span>
+          <span class="portal-card__go">Open</span>
+        </a>
+        <a class="portal-card" data-portal-link="formResponses" href="#" target="_blank" rel="noopener">
+          <span class="portal-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h10a1.5 1.5 0 0 1 1.5 1.5v14a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5z"/><path d="M9 8.5h6M9 12h6M9 15.5h3.5"/></svg>
+          </span>
+          <span class="portal-card__name">Sign-up responses</span>
+          <span class="portal-card__desc">Who has signed up, students and volunteers, straight off the interest form.</span>
+          <span class="portal-card__go">Open</span>
+        </a>
+        <a class="portal-card" data-portal-link="inventory" href="#" target="_blank" rel="noopener">
+          <span class="portal-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.2L12 4l8.5 4.2v7.6L12 20l-8.5-4.2z"/><path d="M3.5 8.2L12 12.4l8.5-4.2M12 12.4V20"/></svg>
+          </span>
+          <span class="portal-card__name">Inventory</span>
+          <span class="portal-card__desc">Every part we own and where it lives. Check it before anyone orders anything.</span>
+          <span class="portal-card__go">Open</span>
+        </a>
+        <a class="portal-card" data-portal-link="budget" href="#" target="_blank" rel="noopener">
+          <span class="portal-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><path d="M3.5 9h17M9 9v11.5M14.5 12.5h3M14.5 16h3"/></svg>
+          </span>
+          <span class="portal-card__name">Budget</span>
+          <span class="portal-card__desc">What we have, what we owe, and what we still need to raise this season.</span>
           <span class="portal-card__go">Open</span>
         </a>
         <a class="portal-card" data-portal-link="hcb" href="#" target="_blank" rel="noopener">
@@ -132,35 +182,231 @@
           <span class="portal-card__desc">The team&rsquo;s money: balance, transactions, reimbursements, and sponsor deposits.</span>
           <span class="portal-card__go">Open</span>
         </a>
-        <a class="portal-card" data-portal-link="drive" href="#" target="_blank" rel="noopener">
-          <span class="portal-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5A1.5 1.5 0 0 1 5.5 6h4l2 2.5h7A1.5 1.5 0 0 1 20 10v7.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5z"/></svg>
-          </span>
-          <span class="portal-card__name">Team Drive</span>
-          <span class="portal-card__desc">Shared documents, the engineering notebook drafts, and photos.</span>
-          <span class="portal-card__go">Open</span>
-        </a>
-        <a class="portal-card" data-portal-link="budget" href="#" target="_blank" rel="noopener">
-          <span class="portal-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><path d="M3.5 9h17M9 9v11.5M14.5 12.5h3M14.5 16h3"/></svg>
-          </span>
-          <span class="portal-card__name">Budget</span>
-          <span class="portal-card__desc">The season budget: what we have, what we owe, and what we still need to raise.</span>
-          <span class="portal-card__go">Open</span>
-        </a>
-        <a class="portal-card" data-portal-link="formResponses" href="#" target="_blank" rel="noopener">
-          <span class="portal-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h10a1.5 1.5 0 0 1 1.5 1.5v14a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 19V5A1.5 1.5 0 0 1 7 3.5z"/><path d="M9 8.5h6M9 12h6M9 15.5h3.5"/></svg>
-          </span>
-          <span class="portal-card__name">Sign-up responses</span>
-          <span class="portal-card__desc">Who has signed up, students and volunteers, straight from the forms.</span>
-          <span class="portal-card__go">Open</span>
-        </a>
       </div>
     </div>
   </section>
 
-  <section class="section section--tint section--edge">
+  <section class="section section--tint section--edge" id="schedule">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Schedule</span>
+        <h2>When we meet</h2>
+        <p>
+          The calendar below is the same one on the public calendar page, and it is the source of
+          truth. If it is not on there, it is not happening.
+        </p>
+      </div>
+
+      <div class="grid grid--3" style="margin-bottom:2rem">
+        <article class="card">
+          <h3>Weekly meetings</h3>
+          <p>
+            Times come from what students picked on the interest form. Once they are fixed they go
+            on the calendar, and any change gets posted in Discord first.
+          </p>
+          <p class="small muted mb-0">
+            Not fixed yet. The standing days and times land here, and on the calendar, as soon as
+            they are.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Competition days</h3>
+          <p>
+            Qualifiers run December through March, almost always Saturdays and mostly east of
+            Worcester. Plan on the whole day, early call time through the evening.
+          </p>
+          <p class="small muted mb-0">Dates get added as FIRST publishes them.</p>
+        </article>
+        <article class="card">
+          <h3>Dates that do not move</h3>
+          <p>
+            Kickoff is <strong>September 12, 2026</strong>. Event registration closes weeks ahead of
+            each qualifier, and consent forms have to be in before a student can be on the field.
+          </p>
+          <p class="small muted mb-0">Miss those and no amount of robot fixes it.</p>
+        </article>
+      </div>
+
+      <!-- Same calendar as calendar.html, filled in by site.js from config.js -->
+      <div class="embed embed--calendar" data-embed="portal-calendar" hidden></div>
+
+      <div class="setup-note" data-embed-setup="portal-calendar" hidden>
+        <span class="pill pill--accent">Coming soon</span>
+        <h3 style="margin-top:.75rem">The team calendar goes here</h3>
+        <p class="mb-0">
+          Make the team calendar public in Google Calendar, then paste its embed URL into
+          <code>calendar.embedUrl</code> in <code>assets/js/config.js</code>. It fills in here and on
+          the public calendar page at the same time.
+        </p>
+      </div>
+
+      <p class="btn-row" style="margin-top:1.25rem">
+        <a class="btn btn--ghost btn--sm" data-schedule-link href="#" hidden target="_blank" rel="noopener">Open the schedule doc</a>
+        <a class="btn btn--ghost btn--sm" href="calendar.html">Public calendar page</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="workflow">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Workflow</span>
+        <h2>How a part gets from an idea onto the robot</h2>
+        <p>
+          Not a rule, but it is the order that wastes the least material and the least time.
+        </p>
+      </div>
+
+      <div class="split">
+        <div>
+          <ol class="timeline">
+            <li>
+              <span class="timeline__when">Step 1</span>
+              <h3>Read the manual, then argue</h3>
+              <p>
+                Strategy first, against what the game actually scores. Arguing on paper is free.
+                Arguing in aluminium is not.
+              </p>
+            </li>
+            <li>
+              <span class="timeline__when">Step 2</span>
+              <h3>Model it in Onshape</h3>
+              <p>
+                CAD the mechanism before anything gets cut or printed. Onshape runs in a browser and
+                is free for students, so there is nothing to install and nothing to lose.
+              </p>
+            </li>
+            <li>
+              <span class="timeline__when">Step 3</span>
+              <h3>Build it</h3>
+              <p>
+                Cut, print, assemble, wire. Check the
+                <a data-portal-link="inventory" href="#" target="_blank" rel="noopener">inventory</a> before ordering
+                anything, because we usually already own it.
+              </p>
+            </li>
+            <li>
+              <span class="timeline__when">Step 4</span>
+              <h3>Code it in VS Code</h3>
+              <p>
+                The robot code is our copy of the FTC SDK, on
+                <a data-social-link="github" href="#" target="_blank" rel="noopener">GitHub</a>. Clone it, open the
+                folder in VS Code, and commit as you go: small commits, real messages, on a branch
+                rather than straight onto main.
+              </p>
+            </li>
+            <li>
+              <span class="timeline__when">Step 5</span>
+              <h3>Test it, then write it down</h3>
+              <p>
+                Drive it, break it, measure it. Then put the decision and the numbers in the
+                engineering notebook in the
+                <a data-portal-link="drive" href="#" target="_blank" rel="noopener">team Drive</a> while you still
+                remember why you made them. Judges read that notebook, and it is how the Inspire
+                Award gets won.
+              </p>
+            </li>
+          </ol>
+        </div>
+
+        <aside class="card">
+          <span class="eyebrow">Ground rules</span>
+          <h3>Four things that keep this working</h3>
+          <ul class="checks">
+            <li><strong>CAD before you cut.</strong> Even a rough model catches the collision you were about to build.</li>
+            <li><strong>Commit before you leave.</strong> Work that exists on one laptop does not exist.</li>
+            <li><strong>Write it up the same day.</strong> The notebook gets written while you remember, not the night before judging.</li>
+            <li><strong>Ask in Discord.</strong> Somebody has already hit your error. Do not lose an afternoon to it alone.</li>
+          </ul>
+          <p class="small muted mb-0">
+            New to all of this? Nobody expects you to know it on day one. Start at step 3 and pick up
+            the rest standing next to someone doing it.
+          </p>
+        </aside>
+      </div>
+
+      <div class="section-head" style="margin-top:clamp(2.5rem,5vw,3.5rem)">
+        <span class="eyebrow">Software</span>
+        <h2>What to install</h2>
+        <p>
+          All free. Onshape needs no install at all, and you do not need every one of these on day
+          one.
+        </p>
+      </div>
+
+      <div class="portal-grid">
+        <a class="portal-card" href="https://www.onshape.com/en/education/" target="_blank" rel="noopener">
+          <span class="portal-card__name">Onshape</span>
+          <span class="portal-card__desc">CAD, in the browser, free for students. The whole team can be in one document at once, so the person building a part is looking at the same thing as the person who drew it.</span>
+          <span class="portal-card__go">Open</span>
+        </a>
+        <a class="portal-card" href="https://code.visualstudio.com/" target="_blank" rel="noopener">
+          <span class="portal-card__name">Visual Studio Code</span>
+          <span class="portal-card__desc">Where we write the robot code. Free, quick to start, and it handles Java and Git without a fight.</span>
+          <span class="portal-card__go">Open</span>
+        </a>
+        <a class="portal-card" href="https://github.com/FIRST-Tech-Challenge/FtcRobotController" target="_blank" rel="noopener">
+          <span class="portal-card__name">FTC SDK (FtcRobotController)</span>
+          <span class="portal-card__desc">The official starting point for robot code. Everything we write sits on top of this repository.</span>
+          <span class="portal-card__go">Open</span>
+        </a>
+        <a class="portal-card" href="https://git-scm.com/downloads" target="_blank" rel="noopener">
+          <span class="portal-card__name">Git</span>
+          <span class="portal-card__desc">Version control. Install it once and nobody loses a season of work to a dead laptop.</span>
+          <span class="portal-card__go">Open</span>
+        </a>
+        <a class="portal-card" href="https://desktop.github.com/" target="_blank" rel="noopener">
+          <span class="portal-card__name">GitHub Desktop</span>
+          <span class="portal-card__desc">Optional. Does the commit, pull, and push part with buttons, if the command line is not your thing yet.</span>
+          <span class="portal-card__go">Open</span>
+        </a>
+        <a class="portal-card" href="https://developer.android.com/studio" target="_blank" rel="noopener">
+          <span class="portal-card__name">Android Studio</span>
+          <span class="portal-card__desc">The heavyweight option FIRST documents. Big download, but it builds the Robot Controller app and debugs on the device.</span>
+          <span class="portal-card__go">Open</span>
+        </a>
+        <a class="portal-card" href="https://docs.revrobotics.com/rev-hardware-client/" target="_blank" rel="noopener">
+          <span class="portal-card__name">REV Hardware Client</span>
+          <span class="portal-card__desc">Updates firmware on the Control Hub and the motors. Windows only, and you only need it now and then.</span>
+          <span class="portal-card__go">Open</span>
+        </a>
+      </div>
+
+      <p class="btn-row" style="margin-top:1.75rem">
+        <a class="btn btn--ghost btn--sm" href="resources.html">FIRST manuals, docs, and training</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--tint section--edge" id="video">
+    <div class="wrap" style="max-width:52rem">
+      <div class="section-head">
+        <span class="eyebrow">Watch first</span>
+        <h2>Team video</h2>
+        <p>The one worth ten minutes before your first meeting.</p>
+      </div>
+
+      <!-- Filled in by site.js from portal.videoEmbedUrl in config.js -->
+      <div class="embed embed--video" data-embed="portal-video" hidden></div>
+
+      <div class="setup-note" data-embed-setup="portal-video" hidden>
+        <span class="pill pill--accent">Coming soon</span>
+        <h3 style="margin-top:.75rem">The video goes here</h3>
+        <p class="mb-0">
+          Setting this up: on YouTube hit <strong>Share &rarr; Embed</strong>, copy the
+          <code>src="&hellip;"</code> URL (it looks like <code>youtube.com/embed/&hellip;</code>) and
+          paste it into <code>portal.videoEmbedUrl</code> in <code>assets/js/config.js</code>.
+        </p>
+      </div>
+
+      <p class="btn-row" style="margin-top:1.25rem">
+        <a class="btn btn--ghost btn--sm" href="https://www.youtube.com/@FIRSTTechChallenge" target="_blank" rel="noopener">FIRST Tech Challenge on YouTube</a>
+        <a class="btn btn--ghost btn--sm" data-portal-link="firstDashboard" href="#" target="_blank" rel="noopener">FIRST Dashboard</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="wrap split">
       <div>
         <span class="eyebrow">Public pages</span>
@@ -169,10 +415,23 @@
         <div class="btn-row">
           <a class="btn btn--ghost btn--sm" href="index.html">Home</a>
           <a class="btn btn--ghost btn--sm" href="roster.html">Roster</a>
+          <a class="btn btn--ghost btn--sm" href="resources.html">Resources</a>
           <a class="btn btn--ghost btn--sm" href="news.html">News</a>
           <a class="btn btn--ghost btn--sm" href="calendar.html">Calendar</a>
           <a class="btn btn--ghost btn--sm" href="sponsors.html">Sponsors</a>
           <a class="btn btn--ghost btn--sm" href="join.html">Join</a>
+        </div>
+
+        <div class="notice" style="margin-top:1.75rem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3.2l8.5 3.6v5.4c0 4.6-3.4 8.2-8.5 9.6-5.1-1.4-8.5-5-8.5-9.6V6.8z"/><path d="M12 9v4M12 16h.01"/>
+          </svg>
+          <p>
+            <strong>The passcode is a speed bump, not a lock.</strong> This page stays out of search
+            results and the passcode keeps it out of casual view, but a determined person could still
+            read these links out of the page source. Every tool behind them has its own login. Keep
+            passwords, personal details, and anything genuinely sensitive off this page.
+          </p>
         </div>
       </div>
 
@@ -181,7 +440,12 @@
         <h3>How to put something here</h3>
         <p>
           Open <code>assets/js/config.js</code> and fill in the matching entry under
-          <code>portal</code>. The card goes live the moment it has a URL, with no other changes needed.
+          <code>portal</code>. The card goes live the moment it has a URL, with no other changes
+          needed.
+        </p>
+        <p>
+          For a card that does not exist yet, add the key in <code>config.js</code> and a matching
+          entry in <code>PORTAL_CARDS</code> in the page generator.
         </p>
         <p class="mb-0"><a data-contact-email="show" href="mailto:">email us</a></p>
       </aside>

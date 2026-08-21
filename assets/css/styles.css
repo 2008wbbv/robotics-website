@@ -804,6 +804,8 @@ table.data tbody tr:last-child td { border-bottom: 0; }
 @media (max-width: 40rem) {
   .embed--calendar iframe { min-height: 520px; }
 }
+/* Video keeps a 16:9 box whatever the width, so nothing jumps as it loads. */
+.embed--video iframe { aspect-ratio: 16 / 9; height: auto; background: #000; }
 
 .setup-note {
   background: var(--surface);

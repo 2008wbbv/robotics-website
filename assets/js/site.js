@@ -285,8 +285,22 @@
       scrolling: "no",
     });
 
+    /* The portal shows the same calendar again, next to the internal links, so
+       the team doesn't have to leave the page to check the schedule. */
+    mountEmbed("portal-calendar", calendar.embedUrl, "Millis Dynamics team calendar", {
+      scrolling: "no",
+    });
+
+    var portal = CONFIG.portal || {};
+    mountEmbed("portal-video", portal.videoEmbedUrl, portal.videoTitle || "Team video", {
+      allowfullscreen: "",
+      allow: "accelerometer; encrypted-media; picture-in-picture; web-share",
+      referrerpolicy: "strict-origin-when-cross-origin",
+    });
+
     wireShareLink("data-student-form-link", student.shareUrl);
     wireShareLink("data-calendar-link", calendar.publicUrl);
+    wireShareLink("data-schedule-link", portal.schedule);
   }
 
   /* ------------------------------------------------------------------------
